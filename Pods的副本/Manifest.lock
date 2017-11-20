@@ -1,0 +1,60 @@
+PODS:
+  - Alamofire (4.5.0)
+  - BothamUI (2.0.0)
+  - CBMDTabbarController (1.0.0)
+  - jot (0.1.5):
+    - Masonry (~> 0.6.1)
+  - Masonry (0.6.4)
+  - MOBFoundation (3.0.2)
+  - Pageboy (1.4.1)
+  - PureLayout (3.0.2)
+  - SCLAlertView-Objective-C (1.1.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SMSSDK (3.0.1):
+    - MOBFoundation
+  - SVProgressHUD (2.1.2)
+  - SwiftyJSON (3.1.4)
+  - Tabman (0.8.1):
+    - Pageboy (~> 1.4.0)
+    - PureLayout (~> 3.0.0)
+  - XHRefreshControl (4.5.4)
+  - ZFPlayer (2.1.5):
+    - Masonry
+
+DEPENDENCIES:
+  - Alamofire
+  - BothamUI
+  - CBMDTabbarController
+  - jot
+  - SCLAlertView-Objective-C
+  - SDWebImage (~> 3.7)
+  - SMSSDK
+  - SVProgressHUD
+  - SwiftyJSON
+  - Tabman
+  - XHRefreshControl
+  - ZFPlayer
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  BothamUI: 5d1073124d4b14e32868a3eeb37509f1e8a73638
+  CBMDTabbarController: 5648d9881c04bf827d446cf59cbd4c57c5729f30
+  jot: 0f5dc333defa6ad805d01adc3834b201c22510a7
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MOBFoundation: d5e27c4638d911d3c7501aa5df458955d4814359
+  Pageboy: c98cd4580c26b2f64c3b4232e616a42989819400
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SCLAlertView-Objective-C: 0e54351fa4f98a5c7c6ad3727e6dbb46784534e5
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SMSSDK: a811c8ea6e89393097037b7cf6493248a40e50f0
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Tabman: b96bf542b8c16d46d6681b810c1327dac210885c
+  XHRefreshControl: 156c759632120718859baa672359873345a2bf12
+  ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
+
+PODFILE CHECKSUM: 2cbd37e25d2e1478576feb26d2eb95016ef2cfb0
+
+COCOAPODS: 1.2.1

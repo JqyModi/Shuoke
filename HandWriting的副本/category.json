@@ -1,0 +1,1179 @@
+{"attr": [
+  {
+    "key": "年级",
+    "vals": [
+      {
+        "id": "632",
+        "isCheck": "false",
+        "val": "三年级上",
+        "type":"class"
+      },
+      {
+        "id": "631",
+        "isCheck": "false",
+        "val": "三年级下",
+        "type":"class"
+      },
+      {
+        "id": "630",
+        "isCheck": "false",
+        "val": "四年级上",
+        "type":"class"
+      },
+      {
+        "id": "629",
+        "isCheck": "false",
+        "val": "四年级下",
+        "type":"class"
+      },
+      {
+        "id": "628",
+        "isCheck": "false",
+        "val": "五年级上",
+        "type":"class"
+      },
+      {
+        "id": "627",
+        "isCheck": "false",
+        "val": "五年级下",
+        "type":"class"
+      },
+      {
+        "id": "626",
+        "isCheck": "false",
+        "val": "六年级上",
+        "type":"class"
+      },
+      {
+        "id": "625",
+        "isCheck": "false",
+        "val": "六年级下",
+        "type":"class"
+      },
+      {
+        "id": "624",
+        "isCheck": "false",
+        "val": "七年级上",
+        "type":"class"
+      },
+      {
+        "id": "623",
+        "isCheck": "false",
+        "val": "七年级下",
+        "type":"class"
+      },
+      {
+        "id": "622",
+        "isCheck": "false",
+        "val": "八年级上",
+        "type":"class"
+      },
+      {
+        "id": "621",
+        "isCheck": "false",
+        "val": "八年级下",
+        "type":"class"
+      },
+      {
+        "id": "620",
+        "isCheck": "false",
+        "val": "九年级上",
+        "type":"class"
+      },
+      {
+        "id": "619",
+        "isCheck": "false",
+        "val": "九年级下",
+        "type":"class"
+      }
+    ]
+  },
+  {
+    "key": "笔画",
+    "vals": [
+      {
+        "id": "431",
+        "isCheck": "false",
+        "val": "左点",
+        "type":"bihua"
+      },
+      {
+        "id": "432",
+        "isCheck": "false",
+        "val": "仰点",
+        "type":"bihua"
+      },
+      {
+        "id": "433",
+        "isCheck": "false",
+        "val": "撇点",
+        "type":"bihua"
+      },
+      {
+        "id": "434",
+        "isCheck": "false",
+        "val": "挑点",
+        "type":"bihua"
+      },
+      {
+        "id": "435",
+        "isCheck": "false",
+        "val": "长横",
+        "type":"bihua"
+      },
+      {
+        "id": "436",
+        "isCheck": "false",
+        "val": "短横",
+        "type":"bihua"
+      },
+      {
+        "id": "437",
+        "isCheck": "false",
+        "val": "提横",
+        "type":"bihua"
+      },
+      {
+        "id": "438",
+        "isCheck": "false",
+        "val": "垂露竖",
+        "type":"bihua"
+      },
+      {
+        "id": "439",
+        "isCheck": "false",
+        "val": "悬针竖",
+        "type":"bihua"
+      },
+      {
+        "id": "440",
+        "isCheck": "false",
+        "val": "短竖",
+        "type":"bihua"
+      },
+      {
+        "id": "441",
+        "isCheck": "false",
+        "val": "短撇",
+        "type":"bihua"
+      },
+      {
+        "id": "442",
+        "isCheck": "false",
+        "val": "长撇"
+      },
+      {
+        "id": "443",
+        "isCheck": "false",
+        "val": "竖撇",
+        "type":"bihua"
+      },
+      {
+        "id": "444",
+        "isCheck": "false",
+        "val": "平捺",
+        "type":"bihua"
+      },
+      {
+        "id": "445",
+        "isCheck": "false",
+        "val": "反捺",
+        "type":"bihua"
+      },
+      {
+        "id": "446",
+        "isCheck": "false",
+        "val": "斜钩",
+        "type":"bihua"
+      },
+      {
+        "id": "447",
+        "isCheck": "false",
+        "val": "卧钩",
+        "type":"bihua"
+      },
+      {
+        "id": "448",
+        "isCheck": "false",
+        "val": "竖弯",
+        "type":"bihua"
+      },
+      {
+        "id": "449",
+        "isCheck": "false",
+        "val": "竖弯钩",
+        "type":"bihua"
+      },
+      {
+        "id": "450",
+        "isCheck": "false",
+        "val": "横折",
+        "type":"bihua"
+      },
+      {
+        "id": "451",
+        "isCheck": "false",
+        "val": "横撇",
+        "type":"bihua"
+      },
+      {
+        "id": "452",
+        "isCheck": "false",
+        "val": "横折钩",
+        "type":"bihua"
+      },
+      {
+        "id": "453",
+        "isCheck": "false",
+        "val": "竖折折钩",
+        "type":"bihua"
+      },
+      {
+        "id": "454",
+        "isCheck": "false",
+        "val": "横撇弯钩",
+        "type":"bihua"
+      },
+      {
+        "id": "456",
+        "isCheck": "false",
+        "val": "横折折撇",
+        "type":"bihua"
+      },
+      {
+        "id": "457",
+        "isCheck": "false",
+        "val": "横折折钩",
+        "type":"bihua"
+      }
+    ]
+  },
+  {
+    "key": "偏旁",
+    "vals": [
+      {
+        "id": "458",
+        "isCheck": "false",
+        "val": "人字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "459",
+        "isCheck": "false",
+        "val": "单人旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "460",
+        "isCheck": "false",
+        "val": "双人旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "461",
+        "isCheck": "false",
+        "val": "草字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "462",
+        "isCheck": "false",
+        "val": "竹字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "463",
+        "isCheck": "false",
+        "val": "山字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "464",
+        "isCheck": "false",
+        "val": "穴宝头",
+        "type":"bianpang"
+      },
+      {
+        "id": "465",
+        "isCheck": "false",
+        "val": "宝盖头",
+        "type":"bianpang"
+      },
+      {
+        "id": "466",
+        "isCheck": "false",
+        "val": "秃宝盖",
+        "type":"bianpang"
+      },
+      {
+        "id": "467",
+        "isCheck": "false",
+        "val": "雨字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "468",
+        "isCheck": "false",
+        "val": "l两点水",
+        "type":"bianpang"
+      },
+      {
+        "id": "469",
+        "isCheck": "false",
+        "val": "三点水",
+        "type":"bianpang"
+      },
+      {
+        "id": "470",
+        "isCheck": "false",
+        "val": "提土旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "471",
+        "isCheck": "false",
+        "val": "王字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "472",
+        "isCheck": "false",
+        "val": "提手旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "473",
+        "isCheck": "false",
+        "val": "牛字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "474",
+        "isCheck": "false",
+        "val": "竖心旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "475",
+        "isCheck": "false",
+        "val": "米字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "476",
+        "isCheck": "false",
+        "val": "口字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "477",
+        "isCheck": "false",
+        "val": "日字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "478",
+        "isCheck": "false",
+        "val": "月字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "479",
+        "isCheck": "false",
+        "val": "目字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "480",
+        "isCheck": "false",
+        "val": "页字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "481",
+        "isCheck": "false",
+        "val": "左耳旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "482",
+        "isCheck": "false",
+        "val": "右耳旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "483",
+        "isCheck": "false",
+        "val": "西字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "484",
+        "isCheck": "false",
+        "val": "言字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "485",
+        "isCheck": "false",
+        "val": "足字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "486",
+        "isCheck": "false",
+        "val": "女字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "487",
+        "isCheck": "false",
+        "val": "女字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "488",
+        "isCheck": "false",
+        "val": "纹丝旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "489",
+        "isCheck": "false",
+        "val": "金字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "490",
+        "isCheck": "false",
+        "val": "食字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "491",
+        "isCheck": "false",
+        "val": "又字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "492",
+        "isCheck": "false",
+        "val": "反文旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "493",
+        "isCheck": "false",
+        "val": "反犬旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "494",
+        "isCheck": "false",
+        "val": "示字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "495",
+        "isCheck": "false",
+        "val": "斤字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "496",
+        "isCheck": "false",
+        "val": "立刀旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "497",
+        "isCheck": "false",
+        "val": "单耳刀（单包耳）",
+        "type":"bianpang"
+      },
+      {
+        "id": "498",
+        "isCheck": "false",
+        "val": "力字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "499",
+        "isCheck": "false",
+        "val": "佳字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "500",
+        "isCheck": "false",
+        "val": "见字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "501",
+        "isCheck": "false",
+        "val": "四点底",
+        "type":"bianpang"
+      },
+      {
+        "id": "502",
+        "isCheck": "false",
+        "val": "心字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "503",
+        "isCheck": "false",
+        "val": "皿字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "504",
+        "isCheck": "false",
+        "val": "木字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "505",
+        "isCheck": "false",
+        "val": "木字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "506",
+        "isCheck": "false",
+        "val": "广字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "507",
+        "isCheck": "false",
+        "val": "户字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "508",
+        "isCheck": "false",
+        "val": "病字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "509",
+        "isCheck": "false",
+        "val": "建字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "510",
+        "isCheck": "false",
+        "val": "走之旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "511",
+        "isCheck": "false",
+        "val": "走字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "512",
+        "isCheck": "false",
+        "val": "同字框",
+        "type":"bianpang"
+      },
+      {
+        "id": "513",
+        "isCheck": "false",
+        "val": "门字框",
+        "type":"bianpang"
+      },
+      {
+        "id": "514",
+        "isCheck": "false",
+        "val": "国字框",
+        "type":"bianpang"
+      },
+      {
+        "id": "515",
+        "isCheck": "false",
+        "val": "医字框",
+        "type":"bianpang"
+      },
+      {
+        "id": "516",
+        "isCheck": "false",
+        "val": "弓字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "517",
+        "isCheck": "false",
+        "val": "衣字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "518",
+        "isCheck": "false",
+        "val": "殳字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "519",
+        "isCheck": "false",
+        "val": "马字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "520",
+        "isCheck": "false",
+        "val": "鸟字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "521",
+        "isCheck": "false",
+        "val": "三撇儿",
+        "type":"bianpang"
+      },
+      {
+        "id": "522",
+        "isCheck": "false",
+        "val": "巾字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "523",
+        "isCheck": "false",
+        "val": "子字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "524",
+        "isCheck": "false",
+        "val": "区字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "525",
+        "isCheck": "false",
+        "val": "l石字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "526",
+        "isCheck": "false",
+        "val": "山字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "527",
+        "isCheck": "false",
+        "val": "禾字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "528",
+        "isCheck": "false",
+        "val": "大字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "529",
+        "isCheck": "false",
+        "val": "大字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "530",
+        "isCheck": "false",
+        "val": "火字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "531",
+        "isCheck": "false",
+        "val": "火字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "532",
+        "isCheck": "false",
+        "val": "水字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "533",
+        "isCheck": "false",
+        "val": "口字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "534",
+        "isCheck": "false",
+        "val": "日字底",
+        "type":"bianpang"
+      },
+      {
+        "id": "535",
+        "isCheck": "false",
+        "val": "画字框",
+        "type":"bianpang"
+      },
+      {
+        "id": "536",
+        "isCheck": "false",
+        "val": "欠字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "537",
+        "isCheck": "false",
+        "val": "父字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "538",
+        "isCheck": "false",
+        "val": "春字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "539",
+        "isCheck": "false",
+        "val": "尚字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "540",
+        "isCheck": "false",
+        "val": "四字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "541",
+        "isCheck": "false",
+        "val": "虎字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "542",
+        "isCheck": "false",
+        "val": "气字头",
+        "type":"bianpang"
+      },
+      {
+        "id": "543",
+        "isCheck": "false",
+        "val": "虫字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "544",
+        "isCheck": "false",
+        "val": "骨字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "545",
+        "isCheck": "false",
+        "val": "黑字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "546",
+        "isCheck": "false",
+        "val": "缶字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "547",
+        "isCheck": "false",
+        "val": "今字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "548",
+        "isCheck": "false",
+        "val": "革字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "549",
+        "isCheck": "false",
+        "val": "戈字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "550",
+        "isCheck": "false",
+        "val": "牙字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "551",
+        "isCheck": "false",
+        "val": "毛字旁",
+        "type":"bianpang"
+      },
+      {
+        "id": "552",
+        "isCheck": "false",
+        "val": "八字头",
+        "type":"bianpang"
+      }
+    ]
+  },
+  {
+    "key": "结构",
+    "vals": [
+      {
+        "id": "559",
+        "isCheck": "false",
+        "val": "全包围",
+        "type":"jiegou"
+      },
+      {
+        "id": "561",
+        "isCheck": "false",
+        "val": "字扁",
+        "type":"jiegou"
+      },
+      {
+        "id": "562",
+        "isCheck": "false",
+        "val": "字正",
+        "type":"jiegou"
+      },
+      {
+        "id": "563",
+        "isCheck": "false",
+        "val": "字圆",
+        "type":"jiegou"
+      },
+      {
+        "id": "564",
+        "isCheck": "false",
+        "val": "字大",
+        "type":"jiegou"
+      },
+      {
+        "id": "565",
+        "isCheck": "false",
+        "val": "字小",
+        "type":"jiegou"
+      },
+      {
+        "id": "566",
+        "isCheck": "false",
+        "val": "字斜",
+        "type":"jiegou"
+      },
+      {
+        "id": "567",
+        "isCheck": "false",
+        "val": "字高",
+        "type":"jiegou"
+      },
+      {
+        "id": "568",
+        "isCheck": "false",
+        "val": "字矮",
+        "type":"jiegou"
+      },
+      {
+        "id": "569",
+        "isCheck": "false",
+        "val": "字窄",
+        "type":"jiegou"
+      },
+      {
+        "id": "570",
+        "isCheck": "false",
+        "val": "下包上",
+        "type":"jiegou"
+      },
+      {
+        "id": "571",
+        "isCheck": "false",
+        "val": "上包下",
+        "type":"jiegou"
+      },
+      {
+        "id": "572",
+        "isCheck": "false",
+        "val": "左包右",
+        "type":"jiegou"
+      },
+      {
+        "id": "573",
+        "isCheck": "false",
+        "val": "左上包",
+        "type":"jiegou"
+      },
+      {
+        "id": "574",
+        "isCheck": "false",
+        "val": "右上包",
+        "type":"jiegou"
+      },
+      {
+        "id": "575",
+        "isCheck": "false",
+        "val": "左下包",
+        "type":"jiegou"
+      },
+      {
+        "id": "576",
+        "isCheck": "false",
+        "val": "上中宽下窄",
+        "type":"jiegou"
+      },
+      {
+        "id": "577",
+        "isCheck": "false",
+        "val": "上中窄下宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "578",
+        "isCheck": "false",
+        "val": "中宽上下窄",
+        "type":"jiegou"
+      },
+      {
+        "id": "579",
+        "isCheck": "false",
+        "val": "上窄中下宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "580",
+        "isCheck": "false",
+        "val": "中窄上下宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "581",
+        "isCheck": "false",
+        "val": "上中下相等",
+        "type":"jiegou"
+      },
+      {
+        "id": "582",
+        "isCheck": "false",
+        "val": "上正下斜",
+        "type":"jiegou"
+      },
+      {
+        "id": "583",
+        "isCheck": "false",
+        "val": "上斜下正",
+        "type":"jiegou"
+      },
+      {
+        "id": "584",
+        "isCheck": "false",
+        "val": "上下等宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "585",
+        "isCheck": "false",
+        "val": "上长下短",
+        "type":"jiegou"
+      },
+      {
+        "id": "586",
+        "isCheck": "false",
+        "val": "上短下长",
+        "type":"jiegou"
+      },
+      {
+        "id": "587",
+        "isCheck": "false",
+        "val": "上下相等",
+        "type":"jiegou"
+      },
+      {
+        "id": "589",
+        "isCheck": "false",
+        "val": "上下同字",
+        "type":"jiegou"
+      },
+      {
+        "id": "590",
+        "isCheck": "false",
+        "val": "上开下合",
+        "type":"jiegou"
+      },
+      {
+        "id": "591",
+        "isCheck": "false",
+        "val": "上合下开",
+        "type":"jiegou"
+      },
+      {
+        "id": "592",
+        "isCheck": "false",
+        "val": "上合下分",
+        "type":"jiegou"
+      },
+      {
+        "id": "593",
+        "isCheck": "false",
+        "val": "上分下合",
+        "type":"jiegou"
+      },
+      {
+        "id": "594",
+        "isCheck": "false",
+        "val": "上宽下窄",
+        "type":"jiegou"
+      },
+      {
+        "id": "595",
+        "isCheck": "false",
+        "val": "上窄下宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "596",
+        "isCheck": "false",
+        "val": "左窄中右宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "597",
+        "isCheck": "false",
+        "val": "左中窄右宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "598",
+        "isCheck": "false",
+        "val": "左右宽中窄",
+        "type":"jiegou"
+      },
+      {
+        "id": "599",
+        "isCheck": "false",
+        "val": "左中右均",
+        "type":"jiegou"
+      },
+      {
+        "id": "600",
+        "isCheck": "false",
+        "val": "左右穿插避让",
+        "type":"jiegou"
+      },
+      {
+        "id": "601",
+        "isCheck": "false",
+        "val": "左右对称",
+        "type":"jiegou"
+      },
+      {
+        "id": "602",
+        "isCheck": "false",
+        "val": "左高右低",
+        "type":"jiegou"
+      },
+      {
+        "id": "603",
+        "isCheck": "false",
+        "val": "左右均等",
+        "type":"jiegou"
+      },
+      {
+        "id": "604",
+        "isCheck": "false",
+        "val": "左短右长",
+        "type":"jiegou"
+      },
+      {
+        "id": "605",
+        "isCheck": "false",
+        "val": "左长右短",
+        "type":"jiegou"
+      },
+      {
+        "id": "606",
+        "isCheck": "false",
+        "val": "左窄右宽",
+        "type":"jiegou"
+      },
+      {
+        "id": "607",
+        "isCheck": "false",
+        "val": "左宽右窄",
+        "type":"jiegou"
+      },
+      {
+        "id": "608",
+        "isCheck": "false",
+        "val": "左斜右正",
+        "type":"jiegou"
+      },
+      {
+        "id": "609",
+        "isCheck": "false",
+        "val": "斜抱穿插",
+        "type":"jiegou"
+      },
+      {
+        "id": "610",
+        "isCheck": "false",
+        "val": "左收右放",
+        "type":"jiegou"
+      },
+      {
+        "id": "611",
+        "isCheck": "false",
+        "val": "左放右收（左大右小）",
+        "type":"jiegou"
+      },
+      {
+        "id": "612",
+        "isCheck": "false",
+        "val": "左小居上",
+        "type":"jiegou"
+      },
+      {
+        "id": "613",
+        "isCheck": "false",
+        "val": "右小靠下",
+        "type":"jiegou"
+      },
+      {
+        "id": "614",
+        "isCheck": "false",
+        "val": "左小右大",
+        "type":"jiegou"
+      },
+      {
+        "id": "615",
+        "isCheck": "false",
+        "val": "左右相等",
+        "type":"jiegou"
+      },
+      {
+        "id": "616",
+        "isCheck": "false",
+        "val": "左右同形",
+        "type":"jiegou"
+      },
+      {
+        "id": "617",
+        "isCheck": "false",
+        "val": "左右穿插",
+        "type":"jiegou"
+      },
+      {
+        "id": "618",
+        "isCheck": "false",
+        "val": "左右相背",
+        "type":"jiegou"
+      }
+    ]
+  }
+]}

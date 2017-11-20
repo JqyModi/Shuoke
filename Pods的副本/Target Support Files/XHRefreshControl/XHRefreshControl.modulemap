@@ -1,0 +1,6 @@
+framework module XHRefreshControl {
+  umbrella header "XHRefreshControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

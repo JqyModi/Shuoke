@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CopyBookDetailCollectionViewCellReuseIdentifier" id="0PM-N3-tbu" customClass="CopyBookDetailCollectionViewCell" customModule="HandWriting" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="188"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BBB-YW-RuD" userLabel="Cover Image View">
+                        <rect key="frame" x="0.0" y="0.0" width="157" height="188"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BBB-YW-RuD" firstAttribute="height" secondItem="0PM-N3-tbu" secondAttribute="height" id="N3J-R1-Ddm"/>
+                <constraint firstItem="BBB-YW-RuD" firstAttribute="width" secondItem="0PM-N3-tbu" secondAttribute="width" id="Qc3-me-SL6"/>
+                <constraint firstAttribute="trailing" secondItem="BBB-YW-RuD" secondAttribute="trailing" id="Zi9-cx-czg"/>
+                <constraint firstItem="BBB-YW-RuD" firstAttribute="top" secondItem="0PM-N3-tbu" secondAttribute="top" id="wFf-Zb-nZC"/>
+            </constraints>
+            <size key="customSize" width="134" height="192"/>
+            <connections>
+                <outlet property="coverImageView" destination="BBB-YW-RuD" id="0nw-SK-kKV"/>
+            </connections>
+            <point key="canvasLocation" x="-125.5" y="-20"/>
+        </collectionViewCell>
+    </objects>
+</document>
