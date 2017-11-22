@@ -30,7 +30,18 @@ class RecordPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavi
          填充数据
          */
         loadData()
-        
+    }
+    
+    //添加广播cookie
+    func viewDidAppear() {
+//        observeTextFields()
+    }
+    
+    func viewDidDisappear() {
+        //移除通知监听
+//        if let observer = nttdobserver {
+//            NotificationCenter.default.removeObserver(observer)
+//        }
     }
     func didStartRefreshing() {
         print("开始刷新操作")

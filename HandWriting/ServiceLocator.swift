@@ -437,6 +437,7 @@ class ServiceLocator {
         let viewController: CopyBookDetailViewController = provideMainStoryboard().instantiateViewController("CopyBookDetailViewController")
         let presenter = provideCopyBookDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
+        
         return viewController
     }
     func provideCopyBookDetailPresenter(_ ui: CopyBookDetailUI, detailData: NSMutableDictionary) -> CopyBookDetailPresenter {

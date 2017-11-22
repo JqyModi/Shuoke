@@ -16,4 +16,5 @@ protocol CopyBookDetailUI: BothamUI, BothamLoadingUI {
 //    func configureHeader(_ copyBook: Common)
     func show(items: [CopyBookDetail])
     
+    var data: [CopyBookDetail]? {get set}
 }

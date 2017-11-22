@@ -89,6 +89,58 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         cell.searchModel = data
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        tapToViewController(indexPath: indexPath)
+    }
+    
+    func tapToViewController(indexPath: IndexPath) {
+        let row = indexPath.row
+        let item = searchResults![row]
+        let model = item.model
+        
+        var detailData = NSMutableDictionary()
+        switch model {
+        case "read":   //阅读
+            detailData.removeAllObjects()
+            detailData.setValue(1, forKey: "pid")
+            detailData.setValue(item.id, forKey: "id")
+            detailData.setValue(item.title, forKey: "title")
+            detailData.setValue(item.model, forKey: "model")
+            break;
+        case "beitie":  //碑帖
+            detailData.removeAllObjects()
+            detailData.setValue(item.id, forKey: "id")
+            detailData.setValue(item.title, forKey: "title")
+            detailData.setValue(item.model, forKey: "model")
+            break;
+        case "note":    //讲义
+            detailData.removeAllObjects()
+            detailData.setValue(item.path, forKey: "video")
+            detailData.setValue(item.title, forKey: "title")
+            detailData.setValue(item.model, forKey: "model")
+            break;
+        case "video_play":    //视频
+            detailData.removeAllObjects()
+            let video = Video(name: item.title, img_url: item.imgUrls, img_url_s: item.imgUrls, video_url: item.path)
+            detailData.setValue(item.model, forKey: "model")
+            detailData.setValue(video, forKey: "video")
+            detailData.setValue(self, forKey: "searchVC")
+            break;
+        case "peixun":    //培训
+            break;
+        default:
+            print("*****")
+            break;
+        }
+        //发送跳转广播
+        let center = NotificationCenter.default
+        center.post(name: NSNotification.Name.init(NotifyTapToDetail), object: nil, userInfo: ["detailData" : detailData])
+        //关闭当前搜索页面
+        if detailData["model"] as? String != "video_play" {
+            dismiss(animated: true, completion: nil)
+        }
+    }
     
     //MARK:- UISearchBarDelegate
     //MARK:- UISearchControllerDelegate
@@ -110,6 +162,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //关闭searchController防止遮罩挡住操作
         searchController?.dismiss(animated: true, completion: nil)
     }
 }

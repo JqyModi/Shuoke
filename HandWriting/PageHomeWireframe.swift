@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class PageHomeWireframe: HandWritingWireframe {
+class PageHomeWireframe: HandWritingWireframe, VideoDetailDelegate {
     func presentDailyDetailViewController(_ detailData: NSMutableDictionary) {
         let viewController = serviceLocator.provideDailyDetailViewController(detailData: detailData)
         //值传递
@@ -52,6 +52,33 @@ class PageHomeWireframe: HandWritingWireframe {
         //值传递
         hiddenNavigationBar(viewController: viewController)
         serviceLocator.provideHomePageNavigator()?.push(viewController: viewController)
+    }
+    var videoDetailViewController: VideoDetailViewController?
+    
+    func presentVideoDetailViewController(item: Video) {
+        videoDetailViewController = serviceLocator.provideVideoDetailViewController(item: item)
+        videoDetailViewController?.delegate = self
+        serviceLocator.provideVideoNavigator()?.present(videoDetailViewController!, animated: true, completion: {
+            self.videoDetailViewController?.autoPlay()
+        })
+    }
+    func presentVideoDetailViewController(_ detailData: NSMutableDictionary) {
+        if let item = detailData["video"] as? Video {
+            videoDetailViewController = serviceLocator.provideVideoDetailViewController(item: item)
+            videoDetailViewController?.delegate = self
+            //跳转
+            if let svc = detailData["searchVC"] as? SearchViewController {
+                svc.present(videoDetailViewController!, animated: true, completion: {
+                    self.videoDetailViewController?.autoPlay()
+                })
+            }
+        }
+    }
+    
+    func playerBack(viewController: VideoDetailViewController) {
+        viewController.dismiss(animated: true, completion: {
+            viewController.show(self.videoDetailViewController!, sender: nil)
+        })
     }
     
     func hiddenNavigationBar(viewController: UIViewController){

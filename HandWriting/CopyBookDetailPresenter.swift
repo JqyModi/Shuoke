@@ -33,7 +33,10 @@ class CopyBookDetailPresenter: BothamPresenter {
             //开始填充数据
             //ui?.configureHeader(series)
             self?.ui?.show(items: items)
+            //
+            self?.ui?.data = items
         }
 
     }
 }
+

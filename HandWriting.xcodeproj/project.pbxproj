@@ -36,6 +36,9 @@
 		041A3FAD1F501E64005E23E9 /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A3FAC1F501E64005E23E9 /* LectureDetailViewController.swift */; };
 		041A3FAF1F501E7C005E23E9 /* LectureDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A3FAE1F501E7C005E23E9 /* LectureDetailPresenter.swift */; };
 		041A3FB11F501E9C005E23E9 /* LectureNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A3FB01F501E9C005E23E9 /* LectureNavigationController.swift */; };
+		041AA6571FC4FC0200FDD955 /* PageImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AA6561FC4FC0200FDD955 /* PageImageViewController.swift */; };
+		041AA65A1FC5076900FDD955 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AA6581FC5076900FDD955 /* ImageViewController.swift */; };
+		041AA65F1FC5150800FDD955 /* PageImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AA65E1FC5150800FDD955 /* PageImageViewModel.swift */; };
 		041EE4D51F54E9DA002DC75B /* CustomJotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EE4D41F54E9DA002DC75B /* CustomJotViewController.swift */; };
 		041EE4D81F54F2E1002DC75B /* WritingBackCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EE4D71F54F2E1002DC75B /* WritingBackCustomView.swift */; };
 		0420A43F1F9992BF002E9F90 /* BothamLoadToRefreshHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420A43E1F9992BF002E9F90 /* BothamLoadToRefreshHandler.swift */; };
@@ -271,6 +274,9 @@
 		041A3FAC1F501E64005E23E9 /* LectureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureDetailViewController.swift; sourceTree = "<group>"; };
 		041A3FAE1F501E7C005E23E9 /* LectureDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureDetailPresenter.swift; sourceTree = "<group>"; };
 		041A3FB01F501E9C005E23E9 /* LectureNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureNavigationController.swift; sourceTree = "<group>"; };
+		041AA6561FC4FC0200FDD955 /* PageImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageImageViewController.swift; sourceTree = "<group>"; };
+		041AA6581FC5076900FDD955 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		041AA65E1FC5150800FDD955 /* PageImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageImageViewModel.swift; sourceTree = "<group>"; };
 		041EE4D41F54E9DA002DC75B /* CustomJotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomJotViewController.swift; sourceTree = "<group>"; };
 		041EE4D71F54F2E1002DC75B /* WritingBackCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingBackCustomView.swift; sourceTree = "<group>"; };
 		0420A43E1F9992BF002E9F90 /* BothamLoadToRefreshHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothamLoadToRefreshHandler.swift; sourceTree = "<group>"; };
@@ -590,6 +596,16 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		041AA6531FC4FA5B00FDD955 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				041AA6561FC4FC0200FDD955 /* PageImageViewController.swift */,
+				041AA6581FC5076900FDD955 /* ImageViewController.swift */,
+				041AA65E1FC5150800FDD955 /* PageImageViewModel.swift */,
+			);
+			name = ImageView;
+			sourceTree = "<group>";
+		};
 		041EE4D61F54F276002DC75B /* writingPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +685,7 @@
 		04309BDC1F4D649300A54BBB /* CopyBook */ = {
 			isa = PBXGroup;
 			children = (
+				041AA6531FC4FA5B00FDD955 /* ImageView */,
 				04309BE61F4D69ED00A54BBB /* PresentationModel */,
 				04309BE51F4D69E400A54BBB /* View */,
 				04309BE41F4D69D300A54BBB /* Presenter */,
@@ -1937,6 +1954,7 @@
 				04309C241F4D819C00A54BBB /* CopyBookWireframe.swift in Sources */,
 				04D3AB481F4672AC00C09DAA /* ViewController.swift in Sources */,
 				04D3AB841F4688E300C09DAA /* Dispatch.swift in Sources */,
+				041AA65A1FC5076900FDD955 /* ImageViewController.swift in Sources */,
 				04E018481F4FD0220027E662 /* FamousNavigationController.swift in Sources */,
 				0403765D1F5F765700582BD3 /* NetworkTools.swift in Sources */,
 				04BF1C551F60E1BA004C4958 /* NSString+TextDirectionality.m in Sources */,
@@ -2047,6 +2065,7 @@
 				0435C2181FA1AEFF0043D194 /* DownloadTableViewCell.swift in Sources */,
 				04BF1C541F60E1BA004C4958 /* JVFloatLabeledTextView.m in Sources */,
 				0435C2121FA1AE9B0043D194 /* DownloadUI.swift in Sources */,
+				041AA6571FC4FC0200FDD955 /* PageImageViewController.swift in Sources */,
 				04309C211F4D7A6100A54BBB /* Common.swift in Sources */,
 				0405C18E1F6BAE43009489C4 /* SettingPassView.swift in Sources */,
 				04C180FE1F4BCFE200EC6066 /* WritingUI.swift in Sources */,
@@ -2088,6 +2107,7 @@
 				04C180F81F4BCE8200EC6066 /* WritingPresenter.swift in Sources */,
 				04414E981F6FA5D100A4F119 /* RecordViewController.swift in Sources */,
 				0420A4431F99A005002E9F90 /* BothamLoadToRefresh.swift in Sources */,
+				041AA65F1FC5150800FDD955 /* PageImageViewModel.swift in Sources */,
 				04BC06FE1F5E958B00B611AD /* AccountViewController.swift in Sources */,
 				04BC06F81F5E954500B611AD /* Account.swift in Sources */,
 				041A3FA61F4FFECD005E23E9 /* CopyBookDetailNavigationController.swift in Sources */,

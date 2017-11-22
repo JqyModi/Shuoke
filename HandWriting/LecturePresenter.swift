@@ -8,6 +8,7 @@
 
 import Foundation
 import BothamUI
+import Alamofire
 
 class LecturePresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavigationPresenter {
     //初始化
@@ -79,6 +80,10 @@ class LecturePresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNav
     }
     
     func itemWasTapped(_ item: Common) {
+        //检查网络是否正常
+        if Alamofire {
+            print("WIFI 在线")
+        }
         let detailData = NSMutableDictionary()
         detailData.setValue(item.video, forKey: "video")
         detailData.setValue(item.title, forKey: "title")

@@ -24,6 +24,8 @@ let NotifyGetLoginUser = "NotifyGetLoginUser"
 let RefreshUserInfo = "RefreshUserInfo"
 let NotifyToUserView = "NotifyToUserView"
 let NotifyRefreshUserListItem = "NotifyRefreshUserListItem"
+let NotifyTapToDetail = "TapToDetail"
+
 let Loading = "加载中..."
 
 let THEME = "THEME"

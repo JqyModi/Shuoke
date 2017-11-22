@@ -150,7 +150,7 @@ class HomeViewPagerController: HandWritingViewController {
     
     //准备跳转
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        //处理导航栏情况
         if let destination = segue.destination as? SearchViewController {
             destination.modalPresentationStyle = .popover
 //            destination.modalTransitionStyle = .coverVertical
