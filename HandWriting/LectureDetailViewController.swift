@@ -51,21 +51,26 @@ class LectureDetailViewController: HandWritingViewController, LectureDetailUI {
             let DailyDetailBaseURL = "https://view.officeapps.live.com/op/view.aspx?src="
             let urlStr = DailyDetailBaseURL + item.absoluteString
             self.currentURL = item.absoluteString
-            Thread {
-                let data = NSData(contentsOf: item)
-                //+1是因为省略了小数部分
-                let size = (data?.length)! / (1024*1024) + 1
-                if size > 10 {
-                    //显示下载布局
-                    self.showDownloadButton()
-                    DispatchQueue.main.async(execute: {
-                        SVProgressHUD.showError(withStatus: "文件过大,预览失败,请下载查看~")
-                    })
-                }else{
-                    let request = URLRequest(url: URL(string: urlStr)!)
-                    self.contentWebView.loadRequest(request)
+            //处理断网状态下崩溃bug
+            DispatchQueue.global().async {
+                if let data = NSData(contentsOf: item) {
+                    //+1是因为省略了小数部分
+                    let size = (data.length) / (1024*1024) + 1
+                    if size > 10 {
+                        //显示下载布局
+                        self.showDownloadButton()
+                        DispatchQueue.main.async(execute: {
+                            SVProgressHUD.showError(withStatus: "文件过大,预览失败,请下载查看~")
+                        })
+                    }else{
+                        let request = URLRequest(url: URL(string: urlStr)!)
+                        self.contentWebView.loadRequest(request)
+                    }
+                }else {
+                    SVProgressHUD.dismiss()
+                    SVProgressHUD.showError(withStatus: "当前网络不可用·~~~")
                 }
-                }.start()
+            }
         }
     }
     
@@ -113,7 +118,7 @@ class LectureDetailViewController: HandWritingViewController, LectureDetailUI {
         //
         SVProgressHUD.showInfo(withStatus: "文件开始下载~")
         downloadFile(path: self.currentURL,name: self.title!) { (path,progress) in
-            print("path: \(path)  --  progress: \(progress)")
+            debugPrint("path: \(path)  --  progress: \(progress)")
             //弹出下载进度条dialog
             if progress != 0 {
                 SVProgressHUD.showProgress(Float(progress), status: "文件下载中...")

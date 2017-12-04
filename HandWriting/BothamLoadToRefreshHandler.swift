@@ -39,7 +39,7 @@ open class BothamLoadToRefreshHandler: NSObject {
     open func beginLoadRefreshing(_ scrollView: UIScrollView) {
         //上拉加载触发点
         let temp = refreshControl.frame.size.height
-        print("temp = \(temp)")
+        debugPrint("temp = \(temp)")
         scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentSize.height), animated: true)
         self.refreshControl.beginRefreshing()
         

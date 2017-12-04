@@ -68,7 +68,7 @@ class DailyViewController: HandWritingViewController, BothamTableViewController,
     }
     
     override func viewDidLayoutSubviews() {
-        print("viewDidLayoutSubviews")
+        debugPrint("viewDidLayoutSubviews")
     }
     override func viewWillAppear(_ animated: Bool) {
         SVProgressHUD.show(withStatus: Loading)
@@ -124,7 +124,7 @@ extension DailyViewController:ViewPagerDataSource{
         var label:UILabel?
         if(newView == nil){
 //            newView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:  self.view.frame.height))
-//            print("width = \(SCREEN_WIDTH)")
+//            debugPrint("width = \(SCREEN_WIDTH)")
             newView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height:  self.view.frame.height))
             //设置广告轮播图片
             let adView = UIImageView(frame: (newView?.frame)!)
@@ -146,18 +146,18 @@ extension DailyViewController:ViewPagerDataSource{
     }
     
     func didSelectedItem(index: Int) {
-        print("select index \(index)")
+        debugPrint("select index \(index)")
     }
 }
 
 extension DailyViewController: XHRefreshControlDelegate, UITableViewDelegate {
     //下拉刷新
     func beginPullDownRefreshing() {
-        print("下拉刷新")
+        debugPrint("下拉刷新")
     }
     //上拉加载
     func beginLoadMoreRefreshing() {
-        print("上拉加载")
+        debugPrint("上拉加载")
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

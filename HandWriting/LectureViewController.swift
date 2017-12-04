@@ -72,11 +72,11 @@ class LectureViewController: HandWritingViewController, BothamTableViewControlle
 extension LectureViewController: XHRefreshControlDelegate, UITableViewDelegate {
     //下拉刷新
     func beginPullDownRefreshing() {
-        print("下拉刷新")
+        debugPrint("下拉刷新")
     }
     //上拉加载
     func beginLoadMoreRefreshing() {
-        print("上拉加载")
+        debugPrint("上拉加载")
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

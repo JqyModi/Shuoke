@@ -230,6 +230,11 @@ THE SOFTWARE.
 
 
 
+## Bugly
+
+Copyright 2017 tencent.com. All rights reserved.
+
+
 ## CBMDTabbarController
 
 MIT License

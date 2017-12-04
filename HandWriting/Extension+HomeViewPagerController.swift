@@ -23,7 +23,7 @@ extension HomeViewPagerController: ViewPagerControllerDataSource {
 //        //tabItems：被扩展中声明的属性，直接可以获取到
 //        vc.itemText = "\(tabItems[position].title!)"
 //        return vc
-        print("item count = \(itemControllers.count)")
+        debugPrint("item count = \(itemControllers.count)")
         let vc = itemControllers[position] as! UIViewController
         return vc
     }
@@ -40,11 +40,11 @@ extension HomeViewPagerController: ViewPagerControllerDataSource {
 extension HomeViewPagerController: ViewPagerControllerDelegate {
     
     func willMoveToControllerAtIndex(index:Int) {
-        print("Moving to page \(index)")
+        debugPrint("Moving to page \(index)")
     }
     
     func didMoveToControllerAtIndex(index: Int) {
-        print("Moved to page \(index)")
+        debugPrint("Moved to page \(index)")
     }
     
     

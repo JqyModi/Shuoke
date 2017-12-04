@@ -62,7 +62,7 @@ extension IndicatorPagerController:ViewPagerDataSource{
     }
     
     func didSelectedItem(index: Int) {
-        print("select index \(index)")
+        debugPrint("select index \(index)")
     }
     
 }

@@ -24,7 +24,7 @@ class VideoPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         //填充数据
         getVideoData(jiegou: 0, bianpang: 0, bihua: 0, class1: 0, page: currentPage) { [weak self](items) in
             //开始填充数据
@@ -36,7 +36,7 @@ class VideoPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
     }
     
     @objc func loadMoreData(notify: Notification){
-        print("开始加载数据")
+        debugPrint("开始加载数据")
         self.currentPage = self.currentPage + 1
         
         getVideoData(jiegou: 0, bianpang: 0, bihua: 0, class1: 0, page: currentPage) { [weak self](items) in
@@ -47,7 +47,7 @@ class VideoPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
     }
     
     func didStartRefreshing() {
-        print("开始刷新操作")
+        debugPrint("开始刷新操作")
         //填充数据
         getVideoData { (items) in
             //开始填充数据
@@ -70,7 +70,7 @@ class VideoPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
             self.load(items: items)
         }else{
             SVProgressHUD.showInfo(withStatus: "暂无相关数据")
-            print("数据为空")
+            debugPrint("数据为空")
         }
         
     }

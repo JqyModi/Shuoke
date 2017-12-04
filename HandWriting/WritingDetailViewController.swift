@@ -59,7 +59,7 @@ class WritingDetailViewController: HandWritingViewController, BothamTableViewCon
     
     func rightAction() {
         //
-        print("rightAction")
+        debugPrint("rightAction")
 //        detailDelegate?.dismiss(isClose: true)
         self.navigationController?.popViewController(animated: true)
     }

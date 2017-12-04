@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewDelegate{
     
     func loginAction(name: String, password: String) {
-        print("登录")
+        debugPrint("登录")
         if UserServece.checkUserName(name: name) && UserServece.checkPassword(password: password) {
             //向服务器发起请求获取信息及token
             var token = ""
@@ -79,7 +79,7 @@ extension LoginViewController: LoginViewDelegate{
     }
     
     func forgetAction() {
-        print("忘记密码")
+        debugPrint("忘记密码")
         let forgetVc = ForgetViewController()
         self.modalTransitionStyle = .crossDissolve
         //        self.present(registerViewController, animated: false, completion: {
@@ -91,7 +91,7 @@ extension LoginViewController: LoginViewDelegate{
     }
     
     func registerAction() {
-        print("注册")
+        debugPrint("注册")
         let registerViewController = RegisterViewController()
         self.modalTransitionStyle = .crossDissolve
 //        self.present(registerViewController, animated: false, completion: {

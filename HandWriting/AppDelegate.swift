@@ -26,11 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         configMobSDK()
         
+        configBugly()
+        
         return true
     }
 
-    func configMobSDK(){
+    func configMobSDK() {
         SMSSDK.init()
+    }
+    
+    func configBugly() {
+        Bugly.start(withAppId: AppID)
     }
     
     private func installRootViewControllerIntoWindow(_ window: UIWindow) {

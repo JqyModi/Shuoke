@@ -126,14 +126,14 @@ class AccountTableViewCell: UITableViewCell, BothamViewCell {
             alert?.addCustomView(sexView)
             alert?.addButton("确认", actionBlock: {
                 //
-                print("确认点击")
+                debugPrint("确认点击")
             })
             alert?.showEdit(account.key, subTitle: "请输入更改后的\(account.key)", closeButtonTitle: "取消", duration: TimeInterval(Int.max))
         }else{
             let textField = alert?.addTextField(account.value)
             alert?.addButton("确认", actionBlock: {
                 //
-                print("确认点击")
+                debugPrint("确认点击")
             })
             alert?.showEdit(account.key, subTitle: "请输入更改后的\(account.key)", closeButtonTitle: "取消", duration: TimeInterval(Int.max))
         }

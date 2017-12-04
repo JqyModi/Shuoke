@@ -110,9 +110,9 @@ extension CopyBookDetailViewController: UICollectionViewDelegate {
         let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath) as? CopyBookDetailCollectionViewCell
         //取出数据
         if let imageURL = cell?.imageURL {
-            print("imageURL = \(imageURL)")
+            debugPrint("imageURL = \(imageURL)")
             if collectionView.numberOfSections != 0 {
-                print("count = \(collectionView.numberOfSections)")
+                debugPrint("count = \(collectionView.numberOfSections)")
                 let totalCount = collectionView.dataSource?.collectionView(collectionView, numberOfItemsInSection: collectionView.numberOfSections)
                 //跳转到图片展示界面
                 let pivc = PageImageViewController()

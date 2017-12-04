@@ -24,7 +24,7 @@ class AccountPresenter: BothamPresenter, BothamNavigationPresenter, AccountViewC
     func viewDidLoad() {
         //设置标题文字
         ui?.title = item?.name.uppercased()
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         
         self.loadUserInfo()
         

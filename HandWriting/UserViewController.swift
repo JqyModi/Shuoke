@@ -53,7 +53,7 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
         let userInfo = notification.userInfo as! [String: AnyObject]
 //        rightBtn.setTitle("\(userInfo["cacheSize"] as? String)M", for: .normal)
 //        rightBtn.backgroundColor = UIColor.loginViewBGColor
-        print("缓存大笑：",userInfo["cacheSize"] as? String)
+        debugPrint("缓存大笑：",userInfo["cacheSize"] as? String)
         self.tableView.reloadData()
     }
     
@@ -70,7 +70,7 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("viewDidDisappear")
+        debugPrint("viewDidDisappear")
     }
     
     func configTheme(){
@@ -95,7 +95,7 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
             //获取本地持久化信息
             if let loginUser = UserServece.readWithNSKeyedUnarchiver() as? LoginUser {
                 self.showLoginTextWithUserInfo(loginUser: loginUser)
-                print("userInfo = \(loginUser.addr)")
+                debugPrint("userInfo = \(loginUser.addr)")
                 //SVProgressHUD.show(withStatus: loginUser?.addr)
             }
         }else if (UserServece.readWithNSKeyedUnarchiver() as? LoginUser) != nil {
@@ -155,11 +155,11 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
                 avatar = UIImage(named: "user_icon")!
             }
         } catch {
-            print("异常")
+            debugPrint("异常")
         }
         
         avatarPath = BASEURL + avatarPath.dropFirst().description
-        print("avatarPath = \(avatarPath)")
+        debugPrint("avatarPath = \(avatarPath)")
         self.imgView?.sd_setImage(with: URL(string: avatarPath), placeholderImage: UIImage(named: "user_icon"))
 //        self.imgView?.image = avatar
     }
@@ -280,7 +280,7 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
     }
     
     func updateProfileAction(){
-        print("修改资料")
+        debugPrint("修改资料")
         self.showDetailDelegate?.showDetaiView(tag: 101)
     }
     func loginBtnAction(){
@@ -319,12 +319,12 @@ extension UserViewController: UserWireframeDelegate{
         let data = UIImagePNGRepresentation(newImg)
         // 把 data 转成 Base64 的 string
         let imgStr = UserServece.image2DataURL(image: newImg)
-//        print("imgstr = \(imgStr)")
+//        debugPrint("imgstr = \(imgStr)")
         let token = UserDefaults.standard.object(forKey: accessToken) as! String
         //上传头像返回路径
         getUserAvatar(token: token, data: imgStr, finished: { (path) in
             //将头像路径持久化到本地
-            print("path = \(path)")
+            debugPrint("path = \(path)")
             UserDefaults.standard.setValue(path, forKey: Avatar)
         })
         

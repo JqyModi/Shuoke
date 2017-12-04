@@ -22,5 +22,8 @@
 //PPT预览
 #import "QuickLookViewController.h"
 #import "DocumentInteractionViewController.h"
+//腾讯bugly
+#import <Bugly/Bugly.h>
 #endif /* Bridging_Header_h */
+
 

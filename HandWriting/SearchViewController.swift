@@ -130,7 +130,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         case "peixun":    //培训
             break;
         default:
-            print("*****")
+            debugPrint("*****")
             break;
         }
         //发送跳转广播

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.5.0)
   - BothamUI (2.0.0)
+  - Bugly (2.4.8)
   - CBMDTabbarController (1.0.0)
   - jot (0.1.5):
     - Masonry (~> 0.6.1)
@@ -26,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BothamUI
+  - Bugly
   - CBMDTabbarController
   - jot
   - SCLAlertView-Objective-C
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   BothamUI: 5d1073124d4b14e32868a3eeb37509f1e8a73638
+  Bugly: da3c02408c14838d498429320545a8e439392978
   CBMDTabbarController: 5648d9881c04bf827d446cf59cbd4c57c5729f30
   jot: 0f5dc333defa6ad805d01adc3834b201c22510a7
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
@@ -55,6 +58,6 @@ SPEC CHECKSUMS:
   XHRefreshControl: 156c759632120718859baa672359873345a2bf12
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: 2cbd37e25d2e1478576feb26d2eb95016ef2cfb0
+PODFILE CHECKSUM: 1cd438ce21e82517ba1d5554159ac8426bc31a48
 
 COCOAPODS: 1.2.1

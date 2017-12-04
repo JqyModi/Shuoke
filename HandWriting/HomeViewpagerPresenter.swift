@@ -23,7 +23,7 @@ class HomeViewpagerPresenter: BothamPresenter,BothamNavigationPresenter {
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         //填充数据
 //        load(items: [PageHome(name: "每日推荐"),
 //                     PageHome(name: "常用碑帖"),
@@ -32,6 +32,39 @@ class HomeViewpagerPresenter: BothamPresenter,BothamNavigationPresenter {
 //                     PageHome(name: "文房雅趣"),
 //                     PageHome(name: "名家名作")])
         observeTextFields()
+        
+        //测试
+        getHomeCommonData(type: "yuedu", pid: 411, page: 1) { (items) in
+            //开始插入数据
+            debugPrint("############path: " + NSHomeDirectory())
+            
+            CacheCommonService.insertCommonWithArray(arr: items, type: 1)
+        }
+        
+        getHomeCommonData(type: "beitie", pid: 0, page: 1) { (items) in
+            //开始插入数据
+            CacheCommonService.insertCommonWithArray(arr: items, type: 2)
+        }
+        
+        getHomeCommonData(type: "note", pid: 0, page: 1) { (items) in
+            //开始插入数据
+            CacheCommonService.insertCommonWithArray(arr: items, type: 3)
+        }
+        
+        getHomeCommonData(type: "yuedu", pid: 413, page: 1) { (items) in
+            //开始插入数据
+            CacheCommonService.insertCommonWithArray(arr: items, type: 4)
+        }
+        
+        getHomeCommonData(type: "yuedu", pid: 412, page: 1) { (items) in
+            //开始插入数据
+            CacheCommonService.insertCommonWithArray(arr: items, type: 5)
+        }
+        
+        getHomeCommonData(type: "yuedu", pid: 414, page: 1) { (items) in
+            //开始插入数据
+            CacheCommonService.insertCommonWithArray(arr: items, type: 6)
+        }
     }
     
     func observeTextFields(){
@@ -61,7 +94,7 @@ class HomeViewpagerPresenter: BothamPresenter,BothamNavigationPresenter {
                 case "peixun":    //培训
                     break;
                 default:
-                    print("*****")
+                    debugPrint("*****")
                     break;
                 }
             }
@@ -73,7 +106,7 @@ class HomeViewpagerPresenter: BothamPresenter,BothamNavigationPresenter {
     }
     
     func itemWasTapped(_ item: PageHome) {
-        print("................")
+        debugPrint("................")
         
     }
 }

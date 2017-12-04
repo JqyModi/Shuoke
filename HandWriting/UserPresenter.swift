@@ -19,7 +19,7 @@ class UserPresenter: BothamPresenter, BothamNavigationPresenter, UserViewControl
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         //填充数据
 //        load(items: [User(icon: "account", name: "账号管理"),User(icon: "collect", name: "我的收藏")
 //            ,User(icon: "record", name: "浏览记录"),User(icon: "clear", name: "清空缓存")

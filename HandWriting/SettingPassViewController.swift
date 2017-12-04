@@ -44,7 +44,7 @@ class SettingPassViewController: UIViewController {
 extension SettingPassViewController: SettingPassViewDelegate{
     //确认注册
     func nextAction(pwd: String, confirmpwd: String) {
-        print("确认注册")
+        debugPrint("确认注册")
         //判断两次输入密码是否一致
         if pwd == confirmpwd {
             let mob = self.mob

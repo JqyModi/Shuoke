@@ -44,7 +44,7 @@ class UpdatePassViewController: UIViewController {
 extension UpdatePassViewController: UpdatePassViewDelegate{
     //确认修改密码
     func nextAction(oldpwd: String, password: String) {
-        print("确认修改")
+        debugPrint("确认修改")
         //获取本地持久化信息
         let loginUser = UserServece.readWithNSKeyedUnarchiver() as? LoginUser
         let token = loginUser?.access_token

@@ -22,7 +22,7 @@ class VideoDetailPresenter: BothamPresenter {
     func viewDidLoad() {
         ui?.title = self.item.name.uppercased()
         
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         //填充数据
         self.load(item: self.item)
     }

@@ -26,7 +26,7 @@ class WritingBackCustomView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 //        graphicsContext = UIGraphicsGetCurrentContext()
-        print("init")
+        debugPrint("init")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,7 +48,7 @@ class WritingBackCustomView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
         
-        print("draw")
+        debugPrint("draw")
         
         self.backgroundColor = UIColor.white
         //获取画布上下文

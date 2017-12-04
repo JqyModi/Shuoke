@@ -104,7 +104,7 @@ func getHomeCommonData(type: String, pid: Int,page:Int,finished:@escaping (_ ite
             let dict = JSON(value)
             if dict["data"].arrayObject != nil{
                 let data = dict["data"].arrayObject
-                print("data:",data?.count)
+                debugPrint("data:",data?.count)
                 var results = [Common]()
                 for item in data!{
                     let itemDict = item as! NSDictionary
@@ -131,7 +131,7 @@ func getHomeCommonData(type: String, pid: Int,page:Int,finished:@escaping (_ ite
                 finished(results)
             }
             else{
-                print("暂无内容")
+                debugPrint("暂无内容")
             }
             
         }
@@ -151,7 +151,7 @@ func getVideoData(jiegou: Int = 0, bianpang: Int = 0, bihua:Int = 0, class1:Int 
             let dict = JSON(value)
             if dict["data"].arrayObject != nil{
                 let data = dict["data"].arrayObject
-                print("data:",data?.count)
+                debugPrint("data:",data?.count)
                 var results = [Video]()
                 for item in data!{
                     let itemDict = item as! NSDictionary
@@ -167,7 +167,7 @@ func getVideoData(jiegou: Int = 0, bianpang: Int = 0, bihua:Int = 0, class1:Int 
                 finished(results)
             }
             else{
-                print("暂无内容")
+                debugPrint("暂无内容")
             }
             
         }
@@ -188,7 +188,7 @@ func getCopyBookDetailData(type: String, id: String,page:Int,finished:@escaping 
             let dict = JSON(value)
             if dict["data"].arrayObject != nil{
                 let data = dict["data"].arrayObject
-                print("data:",data?.count)
+                debugPrint("data:",data?.count)
                 var results = [CopyBookDetail]()
                 for item in data!{
                     let itemDict = item as! NSDictionary
@@ -205,7 +205,7 @@ func getCopyBookDetailData(type: String, id: String,page:Int,finished:@escaping 
                 finished(results)
             }
             else{
-                print("暂无内容")
+                debugPrint("暂无内容")
             }
             
         }
@@ -301,7 +301,7 @@ func autoLogin(token: String, finished:@escaping (_ item: LoginUser) -> ()){
 func updateUserInfo(loginUser: LoginUser){
     let url = BASEURL + "api/update?token=gstshuoke360"
     let json = JSON.init(parseJSON: loginUser.description)
-    print("json = \(json)")
+    debugPrint("json = \(json)")
     let params: [String: Any] = ["access_token": loginUser.access_token!,
                                  "data": json]
     Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
@@ -339,7 +339,7 @@ func getUserAvatar(token: String,data: String, finished:@escaping (_ path: Strin
                                  "access_token": token]
     
     Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-        print("json = \(response.result.value)")
+        debugPrint("json = \(response.result.value)")
         if let value = response.result.value {
             let dict = JSON(value)
             let code = dict["error_code"].intValue
@@ -376,7 +376,7 @@ func updatePassword(token: String,oldpwd: String, newpwd: String, finished:@esca
                                  "newpwd": newpwd]
     
     Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-        print("json = \(response.result.value)")
+        debugPrint("json = \(response.result.value)")
         if let value = response.result.value {
             let dict = JSON(value)
             let code = dict["error_code"].intValue
@@ -409,7 +409,7 @@ func submitRegitser(mob: String,pwd: String, finished:@escaping (_ rs: Bool) -> 
                                  "pass": pwd]
     
     Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-        print("json = \(response.result.value)")
+        debugPrint("json = \(response.result.value)")
         if let value = response.result.value {
             let dict = JSON(value)
             let code = dict["error_code"].intValue
@@ -442,7 +442,7 @@ func forgotPassword(mob: String,pwd: String, finished:@escaping (_ rs: Bool) -> 
                                  "pass": pwd]
     
     Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-        print("json = \(response.result.value)")
+        debugPrint("json = \(response.result.value)")
         if let value = response.result.value {
             let dict = JSON(value)
             let code = dict["error_code"].intValue
@@ -530,11 +530,11 @@ func downloadFile(path: String,name: String, finished:@escaping (_ result: (Stri
     }
 //    let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
     Alamofire.download(url, to: destination).response { response in
-        print(response)
+        debugPrint(response)
         let filePath = response.destinationURL?.path
         if !(filePath?.isEmpty)! {
             filePath1 = filePath!
-            print("filePath: \(filePath)")
+            debugPrint("filePath: \(filePath)")
             if UserServece.checkFileExist(fileName: filePath!) {
                 SVProgressHUD.showInfo(withStatus: "文件已经存在~")
                 return finished((filePath1,pro))
@@ -545,7 +545,7 @@ func downloadFile(path: String,name: String, finished:@escaping (_ result: (Stri
             }
         }
         }.downloadProgress { progress in
-//            print("Progress: \(progress.fractionCompleted)")
+//            debugPrint("Progress: \(progress.fractionCompleted)")
             pro = progress.fractionCompleted
             return finished((filePath1,pro))
     }
@@ -555,7 +555,7 @@ func downloadFile(path: String,name: String, finished:@escaping (_ result: (Stri
 func getDownloadFiles(finished:@escaping (_ result: ([Download],String)) -> ()) {
     var result = [Download]()
     let basePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory,FileManager.SearchPathDomainMask.userDomainMask,true).first
-    print("docment ＝ \(basePath)")
+    debugPrint("docment ＝ \(basePath)")
     let fileManager = FileManager.default
     if fileManager.fileExists(atPath: basePath!){
         let childrenPath = fileManager.subpaths(atPath: basePath!)
@@ -563,7 +563,7 @@ func getDownloadFiles(finished:@escaping (_ result: ([Download],String)) -> ()) 
             //过滤登录信息缓存路径
             if childPathin.contains(".ppt") {
 //                let filePath = basePath?.appending("/").appending(childPathin)
-//                print("ppt Ptah = \(filePath)")
+//                debugPrint("ppt Ptah = \(filePath)")
                 result.append(Download(path: childPathin))
             }
         }

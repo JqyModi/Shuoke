@@ -153,7 +153,7 @@ class WritingStartViewController: UIViewController, JotViewControllerDelegate {
     }
     
     func jotViewController(_ jotViewController: JotViewController!, isEditingText isEditing: Bool) {
-        print("isEditing = \(isEditing)")
+        debugPrint("isEditing = \(isEditing)")
         self.clearButton?.isHidden = isEditing
         self.saveButton?.isHidden = isEditing
         self.toggleDrawingButton?.isHidden = isEditing
@@ -161,12 +161,12 @@ class WritingStartViewController: UIViewController, JotViewControllerDelegate {
     func getCurrentText(count: Int) -> String{
         let range = NSRange.init(location: count, length: 1)
         let text = NSString(string: articleStr).substring(with: range)
-        print("text = \(text)")
+        debugPrint("text = \(text)")
         return text
     }
     func drawingImageWithText(text: String){
         writingBack = WritingBackCustomView()
-        print("fontName = \(self.fontFamily)")
+        debugPrint("fontName = \(self.fontFamily)")
         let font = self.getFontByTitle(title: self.fontFamily)
         writingBack?.setFontFamliy(fontFamily: font.familyName)
         writingBack?.frame = CGRect(x: (SCREEN_WIDTH-300)/2, y: (SCREEN_HEIGHT-450)/2, width: 300, height: 300)
@@ -295,10 +295,10 @@ class WritingStartViewController: UIViewController, JotViewControllerDelegate {
             //
             let data = fileHandle.readDataToEndOfFile()
             article = String(data: data, encoding: String.Encoding.utf8)!
-            print(article)
+            debugPrint(article)
 //            self.writingBack?.setDrawText(text: firstStr!)
         }catch{
-            print("文件读取失败")
+            debugPrint("文件读取失败")
             article = ""
         }
        return article

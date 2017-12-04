@@ -117,7 +117,7 @@ class HomeViewPagerController: HandWritingViewController {
         viewPager.didMove(toParentViewController: self)
         
         //测试看下一次进入时是否记录token
-//        print("token = \(UserDefaults.standard.object(forKey: "access_token"))")
+//        debugPrint("token = \(UserDefaults.standard.object(forKey: "access_token"))")
 //        SVProgressHUD.show(withStatus: UserDefaults.standard.object(forKey: "access_token") as! String!)
         
         appDelegate.allowRotation = 1

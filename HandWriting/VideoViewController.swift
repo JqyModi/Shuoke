@@ -59,7 +59,7 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
     }
     
     override func viewDidLayoutSubviews() {
-        print("viewDidLayoutSubviews")
+        debugPrint("viewDidLayoutSubviews")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -134,7 +134,7 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
         let bHeight = UIScreen.main.bounds.height  ///<    屏幕高度
         menu = JSDropDownMenu(origin: CGPoint.init(x: 0, y: 0), andHeight: 45)
 //        menu = JSDropDownMenu(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 45))
-        print("*****************************bwidth = \(bWidth)")
+        debugPrint("*****************************bwidth = \(bWidth)")
 //        SVProgressHUD.showInfo(withStatus: "*****************************bwidth = \(bWidth)")
 //        menu = JSDropDownMenu(frame: CGRect(x: 0, y: 0, width: bWidth, height: 45))
         
@@ -160,7 +160,7 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
         let jsonStr = readVideoCategory(name: "category")
         let json = JSON.init(parseJSON: jsonStr)
         
-        print("json = \(json)")
+        debugPrint("json = \(json)")
         
         //字典－数组－字典
         let dict: NSDictionary = json.dictionaryObject! as NSDictionary
@@ -235,10 +235,10 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
             //
             let data = fileHandle.readDataToEndOfFile()
             json = String(data: data, encoding: String.Encoding.utf8)!
-            print(json)
+            debugPrint(json)
             //            self.writingBack?.setDrawText(text: firstStr!)
         }catch{
-            print("文件读取失败")
+            debugPrint("文件读取失败")
             json = ""
         }
         return json
@@ -413,10 +413,10 @@ extension VideoViewController: JSDropDownMenuDataSource, JSDropDownMenuDelegate{
             ztID = 679
         }
         
-        print("bh = \(bh)")
-        print("bh = \(pp)")
-        print("bh = \(jg)")
-        print("bh = \(zt)")
+        debugPrint("bh = \(bh)")
+        debugPrint("bh = \(pp)")
+        debugPrint("bh = \(jg)")
+        debugPrint("bh = \(zt)")
         //bug待修复
         getVideoData(jiegou: Int(jg)!, bianpang: Int(pp)!, bihua: Int(bh)!, class1: 0, page: 1, finished:{ (items) in
             //加载数据

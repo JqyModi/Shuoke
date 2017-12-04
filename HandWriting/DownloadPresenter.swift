@@ -26,7 +26,7 @@ class DownloadPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNa
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         
         /*
          填充数据
@@ -35,7 +35,7 @@ class DownloadPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNa
         
     }
     func didStartRefreshing() {
-        print("开始刷新操作")
+        debugPrint("开始刷新操作")
         //填充数据
         loadData()
         self.ui?.stopRefreshing()
@@ -45,7 +45,7 @@ class DownloadPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNa
     }
     
     func itemWasTapped(_ item: Download) {
-//        print("Item点击事件")
+//        debugPrint("Item点击事件")
         let url = self.basePath + "/" + item.path
 //        let detailData = NSMutableDictionary()
 //        detailData.setValue(url, forKey: "video")

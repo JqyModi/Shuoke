@@ -23,7 +23,7 @@ class CopyBookPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNa
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         
         /*
          填充数据
@@ -47,28 +47,40 @@ class CopyBookPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNa
     }
     
     @objc func loadMoreData(notify: Notification){
-        print("开始加载数据")
+        debugPrint("开始加载数据")
         self.currentPage = self.currentPage + 1
         getHomeCommonData(type: "beitie", pid: 0, page: currentPage) { [weak self](items) in
             //开始填充数据
             self?.data = (self?.data)! + items
             self?.load(items: (self?.data)!)
         }
+        
+//        CacheCommonService.selectCommonsByType(type: 2, page: 1) { [weak self] (commons) in
+//            self?.load(items: commons)
+//            debugPrint("**********cachecount = \(commons.count)")
+//        }
+        
     }
     
     func didStartRefreshing() {
-        print("开始刷新操作")
+        debugPrint("开始刷新操作")
         //填充数据
         /*
          联网获取数据
          1、http://shuoke360.cn/api/copybook/?token=gstshuoke360&page=1&type=yuedu&pid=411
          type=beitie   pid= ""      每日推荐
          */
-        getHomeCommonData(type: "beitie", pid: 0, page: 1) { [weak self](items) in
-            //开始填充数据
-            self?.data = items
-            self?.load(items: (self?.data)!)
+//        getHomeCommonData(type: "beitie", pid: 0, page: 1) { [weak self](items) in
+//            //开始填充数据
+//            self?.data = items
+//            self?.load(items: (self?.data)!)
+//        }
+        
+        CacheCommonService.selectCommonsByType(type: 2, page: 1) { [weak self] (commons) in
+            self?.load(items: commons)
+            debugPrint("**********cachecount = \(commons.count)")
         }
+        
         self.ui?.stopRefreshing()
     }
     private func load(items: [Common]) {

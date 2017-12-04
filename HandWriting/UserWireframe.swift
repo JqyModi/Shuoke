@@ -28,13 +28,13 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
         switch item.name {
         case "账号管理":
             viewController = serviceLocator.provideAccountViewController(item: item)
-            print("跳转详情页")
+            debugPrint("跳转详情页")
             serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
             break
         case "修改密码":
             if isLogin {
                 viewController = UpdatePassViewController()
-                print("跳转详情页")
+                debugPrint("跳转详情页")
                 viewController?.title = item.name
                 serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
             }else{
@@ -48,7 +48,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
 //                viewController = RecordViewController()
                 viewController = serviceLocator.provideRecordViewController()
                 
-                print("跳转详情页")
+                debugPrint("跳转详情页")
                 viewController?.title = "浏览记录"
                 serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
             }else{
@@ -57,13 +57,13 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
             break
         case "主题切换":
             viewController = ThemeViewController()
-            print("跳转详情页")
+            debugPrint("跳转详情页")
             viewController?.title = "选择主题"
             serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
             break
         case "下载列表":
             viewController = serviceLocator.provideDownloadViewController()
-            print("跳转详情页")
+            debugPrint("跳转详情页")
             viewController?.title = "下载列表"
             serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
             break
@@ -98,7 +98,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
         case 101:
             if isLogin {
                 viewController = serviceLocator.provideAccountViewController(item: item)
-                print("跳转详情页")
+                debugPrint("跳转详情页")
                 let temp = viewController as! AccountViewController
                 temp.isItemEnabled = true
                 configNavigationBar(viewController: temp)
@@ -108,7 +108,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
             }
             break
         case 102:
-            print("点击头像回调")
+            debugPrint("点击头像回调")
             if isLogin {
                 //跳转到photoPickerViewController
                 let pv = photoPickerViewController()
@@ -122,7 +122,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
             
             if isLogin {
                 viewController = serviceLocator.provideAccountViewController(item: item)
-                print("跳转详情页")
+                debugPrint("跳转详情页")
                 let temp = viewController as! AccountViewController
                 temp.isItemEnabled = false
                 serviceLocator.provideUserNavigator()?.push(viewController: temp)
@@ -146,7 +146,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
      */
     func toLoginController(){
         viewController = LoginViewController()
-        print("跳转登录页")
+        debugPrint("跳转登录页")
         viewController?.title = "登录"
         serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
     }
@@ -163,7 +163,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
 
     func toAccount(_ notification: NSNotification){
         viewController = serviceLocator.provideAccountViewController(item: User(icon: "", name: "用户信息"))
-        print("跳转用户信息详情页")
+        debugPrint("跳转用户信息详情页")
         serviceLocator.provideUserNavigator()?.push(viewController: viewController!)
     }
     
@@ -174,7 +174,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
     
     func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
         if buttonIndex == 0 {
-            print("bottonIndex = \(buttonIndex)")
+            debugPrint("bottonIndex = \(buttonIndex)")
             if UserServece.clearCache() {
                 SVProgressHUD.showSuccess(withStatus: "清除成功~")
                 let sizeString = "0.00M"
@@ -213,7 +213,7 @@ class UserWireframe: HandWritingWireframe, UIActionSheetDelegate {
 extension UserWireframe: pickerPhotoDelegate, VPImageCropperDelegate{
     //实现委托方法获取图片
     func getPhoto(_ img: UIImage) {
-        print("获取图片成功")
+        debugPrint("获取图片成功")
         //设置图片之前先将图片裁剪到合适的大小:利用第三方库实现图片的裁剪：VPImageCropperViewController
         //1.273通过封面的长款比例计算出来的:limitScaleRatio：缩放比例控制
         let cropper = VPImageCropperViewController(image: img, cropFrame: CGRect(x: 0,y: 100,width: SCREEN_WIDTH,height: SCREEN_WIDTH*1.273), limitScaleRatio: 3)
@@ -222,22 +222,22 @@ extension UserWireframe: pickerPhotoDelegate, VPImageCropperDelegate{
         //跳转
         serviceLocator.provideUserNavigator()?.showDetailViewController(cropper!, sender: nil)
 //        self.present(cropper!, animated: true) {
-//            print("跳转到图片裁剪界面")
+//            debugPrint("跳转到图片裁剪界面")
 //        }
         
     }
     //图片裁剪事件回调
     func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
-        print("图片裁剪完成回调")
+        debugPrint("图片裁剪完成回调")
         cropperViewController.dismiss(animated: true) {
             //设置封面图片
             self.delegate?.getPhoto(img: editedImage)
         }
     }
     func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
-        print("图片裁剪取消回调")
+        debugPrint("图片裁剪取消回调")
         cropperViewController.dismiss(animated: true) {
-            print("取消裁剪")
+            debugPrint("取消裁剪")
         }
     }
 }

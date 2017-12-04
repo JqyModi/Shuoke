@@ -15,6 +15,9 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.height
 let Appkey = "2100f46cdc470"
 let AppSecret = "f161e1be7799d1171be48a69cbde826e"
 
+//腾讯bugly
+let AppID = "69c360faf2"
+
 let isLogin = "isLogin"
 let accessToken = "accessToken"
 let Avatar = "Avatar"

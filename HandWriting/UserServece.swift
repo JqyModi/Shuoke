@@ -52,7 +52,7 @@ class UserServece {
         /// 3、获取文本文件路径
         let filePath = docPath.appendingPathComponent("data.plist");
         let dataSource = NSArray(contentsOfFile: filePath);
-        print(dataSource)
+        debugPrint(dataSource)
     }
     
     /**
@@ -80,7 +80,7 @@ class UserServece {
         let isFileExist = checkFileExist(fileName: filePath)
         if isFileExist {
             obj = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? NSObject;
-            print(obj?.description)
+            debugPrint(obj?.description)
         }
         return obj
     }
@@ -201,7 +201,7 @@ class UserServece {
     static func caculateCache() ->String {
         let basePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory,FileManager.SearchPathDomainMask.userDomainMask,true).first
         let fileManager = FileManager.default
-        print("cache＝ \(basePath)")
+        debugPrint("cache＝ \(basePath)")
         
         
         var total:Float = 0
@@ -232,7 +232,7 @@ class UserServece {
     static func clearCache() ->Bool{
         var result = false
         let basePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory,FileManager.SearchPathDomainMask.userDomainMask,true).first
-        print("cache＝ \(basePath)")
+        debugPrint("cache＝ \(basePath)")
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: basePath!){
             let childrenPath = fileManager.subpaths(atPath: basePath!)

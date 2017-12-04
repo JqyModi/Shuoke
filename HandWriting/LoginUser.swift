@@ -57,7 +57,7 @@ class LoginUser: NSObject, NSCoding {
     
     init(dict: [String: AnyObject]) {
         
-        print("dict = \(dict)")
+        debugPrint("dict = \(dict)")
         
         
 //        id = Int.init(dict["id"] as! String? ?? "0")!

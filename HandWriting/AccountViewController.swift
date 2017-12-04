@@ -84,7 +84,7 @@ class AccountViewController: HandWritingViewController, BothamTableViewControlle
             let textField = alert?.addTextField(account.value)
             alert?.addButton("确认", actionBlock: {
                 //回填数据到Item: 更新本地数据
-                print("确认点击")
+                debugPrint("确认点击")
                 let text = textField?.text
                 let key = account.key
                 //获取本地持久化数据
@@ -128,7 +128,7 @@ class AccountViewController: HandWritingViewController, BothamTableViewControlle
     
     //确定按钮点击事件
     func rightAction(){
-        print("确定")
+        debugPrint("确定")
         //获取本地持久化数据
         let loginUser = UserServece.readWithNSKeyedUnarchiver() as! LoginUser?
         //将数据提交到服务器
@@ -142,9 +142,9 @@ class AccountViewController: HandWritingViewController, BothamTableViewControlle
 extension AccountViewController: SexChoiceDelegate {
     func itemSelect(index: Int) {
 //        if index == 0 {
-//            print("性别男")
+//            debugPrint("性别男")
 //        }else if index == 1 {
-//            print("性别女")
+//            debugPrint("性别女")
 //        }
         currentSelect = index
         //获取本地持久化数据

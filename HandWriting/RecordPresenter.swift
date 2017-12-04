@@ -24,7 +24,7 @@ class RecordPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavi
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         
         /*
          填充数据
@@ -44,7 +44,7 @@ class RecordPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavi
 //        }
     }
     func didStartRefreshing() {
-        print("开始刷新操作")
+        debugPrint("开始刷新操作")
         //填充数据
         loadData()
         self.ui?.stopRefreshing()
@@ -55,7 +55,7 @@ class RecordPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavi
     
     func itemWasTapped(_ item: Record) {
         //
-        print("Item点击事件")
+        debugPrint("Item点击事件")
         let model = item.model!
 //        type=yuedu   pid= 411      每日推荐
 //        type=beitie  pid=""        碑帖
@@ -100,7 +100,7 @@ class RecordPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavi
         case "peixun":    //培训
             break;
         default:
-            print("*****")
+            debugPrint("*****")
             break;
         }
     }
@@ -112,7 +112,7 @@ class RecordPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavi
         let page = 1
         //闭包调用
         getRecord(token: token!, page: page) { [weak self](records) in
-            print("records.count = \(records.count)")
+            debugPrint("records.count = \(records.count)")
             self?.records = records
             if records.count > 0 {
                 self?.load(items: records)

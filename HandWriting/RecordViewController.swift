@@ -52,7 +52,7 @@ class RecordViewController: UIViewController {
         let page = 1
         //闭包调用
         getRecord(token: token!, page: page) { [weak self](records) in
-            print("records.count = \(records.count)")
+            debugPrint("records.count = \(records.count)")
             self?.records = records
             if records.count > 0 {
                 self?.tableView?.reloadData()

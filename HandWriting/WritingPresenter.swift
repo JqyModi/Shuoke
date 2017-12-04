@@ -24,7 +24,7 @@ class WritingPresenter: BothamPresenter, BothamNavigationPresenter, WritingWiref
     }
     
     func viewDidLoad() {
-        print("加载布局完成")
+        debugPrint("加载布局完成")
         
         wireframe.delegate = self
         
