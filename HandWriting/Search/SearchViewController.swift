@@ -134,11 +134,39 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
             break;
         }
         //发送跳转广播
-        let center = NotificationCenter.default
-        center.post(name: NSNotification.Name.init(NotifyTapToDetail), object: nil, userInfo: ["detailData" : detailData])
-        //关闭当前搜索页面
-        if detailData["model"] as? String != "video_play" {
-            dismiss(animated: true, completion: nil)
+//        let center = NotificationCenter.default
+//        center.post(name: NSNotification.Name.init(NotifyTapToDetail), object: nil, userInfo: ["detailData" : detailData])
+//        //关闭当前搜索页面
+//        if detailData["model"] as? String != "video_play" {
+//            dismiss(animated: true, completion: nil)
+//        }
+        
+        //获取待跳转的VC
+        //获取数据
+        let service = ServiceLocator.sharedInstance
+        var vc: UIViewController?
+        if let model = detailData["model"] as? String {
+            switch model {
+            case "read":   //阅读
+                vc = service.provideStudyDetailViewController(detailData: detailData)
+                break;
+            case "beitie":  //碑帖
+                vc = service.provideCopyBookDetailViewController(detailData: detailData)
+                break;
+            case "note":    //讲义
+                vc = service.provideLectureDetailViewController(detailData: detailData)
+                break;
+            case "video_play":    //视频
+                let video = detailData.value(forKey: "video") as? Video
+                vc = service.provideVideoDetailViewController(item: video!)
+                break;
+            case "peixun":    //培训
+                break;
+            default:
+                debugPrint("*****")
+                break;
+            }
+            self.navigationController?.push(viewController: vc!, animated: true)
         }
     }
     

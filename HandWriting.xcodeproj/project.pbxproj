@@ -136,6 +136,7 @@
 		0498AEC71F5A54A60068F82F /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC61F5A54A60068F82F /* CustomIndicator.swift */; };
 		0498AEC91F5A5C3D0068F82F /* CustomPagerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC81F5A5C3D0068F82F /* CustomPagerBar.swift */; };
 		049BC7411F668198008806FC /* HWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BC7401F668198008806FC /* HWNavigationController.swift */; };
+		049FF3AC2021A28B00631F9E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FF3AB2021A28B00631F9E /* UIView+Extension.swift */; };
 		04BC06F81F5E954500B611AD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC06F71F5E954500B611AD /* Account.swift */; };
 		04BC06FA1F5E956900B611AD /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC06F91F5E956900B611AD /* AccountPresenter.swift */; };
 		04BC06FC1F5E957900B611AD /* AccountUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC06FB1F5E957900B611AD /* AccountUI.swift */; };
@@ -387,6 +388,7 @@
 		0498AEC61F5A54A60068F82F /* CustomIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
 		0498AEC81F5A5C3D0068F82F /* CustomPagerBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPagerBar.swift; sourceTree = "<group>"; };
 		049BC7401F668198008806FC /* HWNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNavigationController.swift; sourceTree = "<group>"; };
+		049FF3AB2021A28B00631F9E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04BC06F71F5E954500B611AD /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		04BC06F91F5E956900B611AD /* AccountPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		04BC06FB1F5E957900B611AD /* AccountUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUI.swift; sourceTree = "<group>"; };
@@ -1529,6 +1531,7 @@
 		04D3AB7C1F46887000C09DAA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				049FF3AB2021A28B00631F9E /* UIView+Extension.swift */,
 				04D3AB851F4688FC00C09DAA /* UIColor.swift */,
 				04D3AB861F4688FC00C09DAA /* UIFont.swift */,
 				04DF83681F56A555002F2D5B /* String.swift */,
@@ -2061,6 +2064,7 @@
 				043C8C821FC2826200037495 /* SearchModel.swift in Sources */,
 				041A3FAF1F501E7C005E23E9 /* LectureDetailPresenter.swift in Sources */,
 				04C180F01F4BC10000EC6066 /* UserNavigationController.swift in Sources */,
+				049FF3AC2021A28B00631F9E /* UIView+Extension.swift in Sources */,
 				04309C161F4D766B00A54BBB /* Study.swift in Sources */,
 				04F6208A1F4EB6B3003E08FA /* DailyNavigationController.swift in Sources */,
 				0420A4451F99D19A002E9F90 /* BothamTableViewDelegate.swift in Sources */,
