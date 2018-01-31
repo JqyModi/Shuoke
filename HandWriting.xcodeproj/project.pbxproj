@@ -137,6 +137,8 @@
 		0498AEC91F5A5C3D0068F82F /* CustomPagerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC81F5A5C3D0068F82F /* CustomPagerBar.swift */; };
 		049BC7411F668198008806FC /* HWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BC7401F668198008806FC /* HWNavigationController.swift */; };
 		049FF3AC2021A28B00631F9E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FF3AB2021A28B00631F9E /* UIView+Extension.swift */; };
+		049FF3B02021BE9C00631F9E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FF3AF2021BE9C00631F9E /* Home.storyboard */; };
+		049FF3B22021C24100631F9E /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FF3B12021C24100631F9E /* HomeDetail.storyboard */; };
 		04BC06F81F5E954500B611AD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC06F71F5E954500B611AD /* Account.swift */; };
 		04BC06FA1F5E956900B611AD /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC06F91F5E956900B611AD /* AccountPresenter.swift */; };
 		04BC06FC1F5E957900B611AD /* AccountUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC06FB1F5E957900B611AD /* AccountUI.swift */; };
@@ -194,7 +196,6 @@
 		04D3AB531F4672AC00C09DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D3AB511F4672AC00C09DAA /* LaunchScreen.storyboard */; };
 		04D3AB5E1F4672AC00C09DAA /* HandWritingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3AB5D1F4672AC00C09DAA /* HandWritingTests.swift */; };
 		04D3AB691F4672AC00C09DAA /* HandWritingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3AB681F4672AC00C09DAA /* HandWritingUITests.swift */; };
-		04D3AB791F46805400C09DAA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 04D3AB781F46805400C09DAA /* Podfile */; };
 		04D3AB841F4688E300C09DAA /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3AB831F4688E300C09DAA /* Dispatch.swift */; };
 		04D3AB871F4688FC00C09DAA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3AB851F4688FC00C09DAA /* UIColor.swift */; };
 		04D3AB881F4688FC00C09DAA /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3AB861F4688FC00C09DAA /* UIFont.swift */; };
@@ -389,6 +390,8 @@
 		0498AEC81F5A5C3D0068F82F /* CustomPagerBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPagerBar.swift; sourceTree = "<group>"; };
 		049BC7401F668198008806FC /* HWNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNavigationController.swift; sourceTree = "<group>"; };
 		049FF3AB2021A28B00631F9E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		049FF3AF2021BE9C00631F9E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		049FF3B12021C24100631F9E /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
 		04BC06F71F5E954500B611AD /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		04BC06F91F5E956900B611AD /* AccountPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		04BC06FB1F5E957900B611AD /* AccountUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUI.swift; sourceTree = "<group>"; };
@@ -453,7 +456,6 @@
 		04D3AB641F4672AC00C09DAA /* HandWritingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandWritingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D3AB681F4672AC00C09DAA /* HandWritingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWritingUITests.swift; sourceTree = "<group>"; };
 		04D3AB6A1F4672AC00C09DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D3AB781F46805400C09DAA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		04D3AB831F4688E300C09DAA /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		04D3AB851F4688FC00C09DAA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		04D3AB861F4688FC00C09DAA /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -1103,6 +1105,29 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		049FF3AD2021BD5800631F9E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04D3AB451F4672AC00C09DAA /* AppDelegate.swift */,
+				04D3AB471F4672AC00C09DAA /* ViewController.swift */,
+				04D3AB4F1F4672AC00C09DAA /* Assets.xcassets */,
+				04D3AB541F4672AC00C09DAA /* Info.plist */,
+				04D3AB4C1F4672AC00C09DAA /* HandWriting.xcdatamodeld */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		049FF3AE2021BDD100631F9E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				04D3AB491F4672AC00C09DAA /* Main.storyboard */,
+				04D3AB511F4672AC00C09DAA /* LaunchScreen.storyboard */,
+				049FF3AF2021BE9C00631F9E /* Home.storyboard */,
+				049FF3B12021C24100631F9E /* HomeDetail.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		04BBADEF1F566541007D4592 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1436,7 +1461,6 @@
 				04D3AB5C1F4672AC00C09DAA /* HandWritingTests */,
 				04D3AB671F4672AC00C09DAA /* HandWritingUITests */,
 				04D3AB431F4672AC00C09DAA /* Products */,
-				04D3AB781F46805400C09DAA /* Podfile */,
 				5424BAD5EA4E9A1060C37075 /* Pods */,
 				5044A512DACB003D93CAA0AB /* Frameworks */,
 			);
@@ -1455,6 +1479,8 @@
 		04D3AB441F4672AC00C09DAA /* HandWriting */ = {
 			isa = PBXGroup;
 			children = (
+				049FF3AE2021BDD100631F9E /* Storyboard */,
+				049FF3AD2021BD5800631F9E /* Support Files */,
 				046D63E91FD5333200445CFA /* db */,
 				043C8C7B1FC2769600037495 /* Search */,
 				04BBADEF1F566541007D4592 /* Resource */,
@@ -1466,13 +1492,6 @@
 				04D3AB8A1F46897200C09DAA /* Writing */,
 				04D3AB7C1F46887000C09DAA /* Extensions */,
 				04D3AB7B1F46884D00C09DAA /* Utils */,
-				04D3AB451F4672AC00C09DAA /* AppDelegate.swift */,
-				04D3AB471F4672AC00C09DAA /* ViewController.swift */,
-				04D3AB491F4672AC00C09DAA /* Main.storyboard */,
-				04D3AB4F1F4672AC00C09DAA /* Assets.xcassets */,
-				04D3AB511F4672AC00C09DAA /* LaunchScreen.storyboard */,
-				04D3AB541F4672AC00C09DAA /* Info.plist */,
-				04D3AB4C1F4672AC00C09DAA /* HandWriting.xcdatamodeld */,
 			);
 			path = HandWriting;
 			sourceTree = "<group>";
@@ -1881,7 +1900,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049FF3B22021C24100631F9E /* HomeDetail.storyboard in Resources */,
 				042F79152003622300EDBFBB /* 行书.TTF in Resources */,
+				049FF3B02021BE9C00631F9E /* Home.storyboard in Resources */,
 				042F79042003621600EDBFBB /* 宋词300首.txt in Resources */,
 				042F79052003621600EDBFBB /* 名人名言.txt in Resources */,
 				04D3AB531F4672AC00C09DAA /* LaunchScreen.storyboard in Resources */,
@@ -1901,7 +1922,6 @@
 				042F79142003622300EDBFBB /* 隶书.TTF in Resources */,
 				042F79112003622300EDBFBB /* 欧体.TTF in Resources */,
 				04D3AB4B1F4672AC00C09DAA /* Main.storyboard in Resources */,
-				04D3AB791F46805400C09DAA /* Podfile in Resources */,
 				042F79022003621600EDBFBB /* 唐诗300首.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2350,7 +2370,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KJ2S6KBYBK;
-				INFOPLIST_FILE = HandWriting/Info.plist;
+				INFOPLIST_FILE = "HandWriting/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -2374,7 +2394,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KJ2S6KBYBK;
-				INFOPLIST_FILE = HandWriting/Info.plist;
+				INFOPLIST_FILE = "HandWriting/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;

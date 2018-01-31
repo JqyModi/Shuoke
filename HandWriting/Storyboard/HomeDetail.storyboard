@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Daily Detail View Controller-->
+        <scene sceneID="Uiw-HN-75X">
+            <objects>
+                <viewController storyboardIdentifier="DailyDetailViewController" id="OLf-SS-JmD" customClass="DailyDetailViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A7S-kp-7v0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZLy-pS-3MJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Vl-1b-sp5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-Lp-T6E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hB5-Lp-T6E" firstAttribute="leading" secondItem="2Vl-1b-sp5" secondAttribute="leading" id="Ln9-3T-g2d"/>
+                            <constraint firstItem="hB5-Lp-T6E" firstAttribute="bottom" secondItem="ZLy-pS-3MJ" secondAttribute="top" id="N9d-yW-djb"/>
+                            <constraint firstItem="hB5-Lp-T6E" firstAttribute="top" secondItem="2Vl-1b-sp5" secondAttribute="top" id="mLQ-Vf-3d6"/>
+                            <constraint firstItem="hB5-Lp-T6E" firstAttribute="width" secondItem="2Vl-1b-sp5" secondAttribute="width" id="rjM-Wb-u4J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gb7-fI-xxg"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentWebView" destination="hB5-Lp-T6E" id="mxG-0h-jLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb7-C9-pxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4007" y="1586"/>
+        </scene>
+        <!--Sight Detail View Controller-->
+        <scene sceneID="sNk-cs-lrG">
+            <objects>
+                <viewController storyboardIdentifier="SightDetailViewController" id="4VF-K3-rTa" userLabel="Sight Detail View Controller" customClass="SightDetailViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jwc-jd-WEV"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ss-Eg-RFf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2wv-i7-5Yk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHE-sp-Kb9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mHE-sp-Kb9" firstAttribute="top" secondItem="2wv-i7-5Yk" secondAttribute="top" id="jmI-fa-pAv"/>
+                            <constraint firstItem="mHE-sp-Kb9" firstAttribute="bottom" secondItem="3ss-Eg-RFf" secondAttribute="top" id="lu1-ym-9ny"/>
+                            <constraint firstItem="mHE-sp-Kb9" firstAttribute="leading" secondItem="2wv-i7-5Yk" secondAttribute="leading" id="rQX-c4-Z30"/>
+                            <constraint firstItem="mHE-sp-Kb9" firstAttribute="width" secondItem="2wv-i7-5Yk" secondAttribute="width" id="xSf-sL-DUe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Ab-Ce-Egr"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentWebView" destination="mHE-sp-Kb9" id="hfd-f2-tLl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VmN-3Z-yDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3359" y="1585"/>
+        </scene>
+        <!--Famous Detail View Controller-->
+        <scene sceneID="Jyy-0n-iNx">
+            <objects>
+                <viewController storyboardIdentifier="FamousDetailViewController" id="eoQ-g7-rfl" userLabel="Famous Detail View Controller" customClass="FamousDetailViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dvt-VH-7da"/>
+                        <viewControllerLayoutGuide type="bottom" id="kMM-1n-474"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YOf-MN-XHI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-xk-B50">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l3X-xk-B50" firstAttribute="leading" secondItem="YOf-MN-XHI" secondAttribute="leading" id="L4W-Ib-azO"/>
+                            <constraint firstItem="l3X-xk-B50" firstAttribute="width" secondItem="YOf-MN-XHI" secondAttribute="width" id="OOm-ob-00D"/>
+                            <constraint firstItem="l3X-xk-B50" firstAttribute="top" secondItem="YOf-MN-XHI" secondAttribute="top" id="VPV-rv-lUf"/>
+                            <constraint firstItem="l3X-xk-B50" firstAttribute="bottom" secondItem="kMM-1n-474" secondAttribute="top" id="suf-m5-nrN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i6b-cW-N03"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentWebView" destination="l3X-xk-B50" id="bHB-Hp-Zp4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGz-Tp-nAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2719" y="1585"/>
+        </scene>
+        <!--Study Detail View Controller-->
+        <scene sceneID="y1P-V8-Aoo">
+            <objects>
+                <viewController storyboardIdentifier="StudyDetailViewController" id="0JI-0e-PE0" userLabel="Study Detail View Controller" customClass="StudyDetailViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y69-08-BJW"/>
+                        <viewControllerLayoutGuide type="bottom" id="hY3-f4-0Yw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Fk-4j-RLk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3I-6F-s7e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S3I-6F-s7e" firstAttribute="top" secondItem="6Fk-4j-RLk" secondAttribute="top" id="Ce9-Z4-ggq"/>
+                            <constraint firstItem="S3I-6F-s7e" firstAttribute="width" secondItem="6Fk-4j-RLk" secondAttribute="width" id="Xxc-Zh-Gpn"/>
+                            <constraint firstItem="S3I-6F-s7e" firstAttribute="bottom" secondItem="hY3-f4-0Yw" secondAttribute="top" id="jQq-Nq-IeP"/>
+                            <constraint firstItem="S3I-6F-s7e" firstAttribute="leading" secondItem="6Fk-4j-RLk" secondAttribute="leading" id="qNi-2u-D5O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MRw-2E-uD4"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentWebView" destination="S3I-6F-s7e" id="k3r-1V-IeY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kO3-2b-lbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4007" y="2275"/>
+        </scene>
+        <!--CopyBook Detail View Controller-->
+        <scene sceneID="M85-x0-eq1">
+            <objects>
+                <viewController storyboardIdentifier="CopyBookDetailViewController" id="JPc-dZ-NFX" userLabel="CopyBook Detail View Controller" customClass="CopyBookDetailViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTH-ne-OKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="yQl-s8-gzT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h8D-jc-hl8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="774-e7-wvR" userLabel="Series Detail Collection View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.93589707960000001" green="0.93217786899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cY5-OU-IoF">
+                                    <size key="itemSize" width="282" height="272"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="774-e7-wvR" firstAttribute="centerY" secondItem="h8D-jc-hl8" secondAttribute="centerY" id="5wA-yi-qKv"/>
+                            <constraint firstItem="774-e7-wvR" firstAttribute="height" secondItem="h8D-jc-hl8" secondAttribute="height" id="6Iv-AQ-ci5"/>
+                            <constraint firstItem="774-e7-wvR" firstAttribute="width" secondItem="h8D-jc-hl8" secondAttribute="width" id="wV0-4V-wiQ"/>
+                            <constraint firstItem="774-e7-wvR" firstAttribute="centerX" secondItem="h8D-jc-hl8" secondAttribute="centerX" id="yhs-vL-Iqk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e1L-Q7-XMO"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="774-e7-wvR" id="Pmz-2n-97N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIn-tq-ySX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3359" y="2275"/>
+        </scene>
+        <!--Lecture Detail View Controller-->
+        <scene sceneID="9g2-HX-aa4">
+            <objects>
+                <viewController storyboardIdentifier="LectureDetailViewController" id="8xQ-kQ-Jwb" userLabel="Lecture Detail View Controller" customClass="LectureDetailViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9gg-fy-PDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="knD-wI-keW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iIn-uJ-0ie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4X-9q-XR2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T4X-9q-XR2" firstAttribute="width" secondItem="iIn-uJ-0ie" secondAttribute="width" id="G0o-ua-HPd"/>
+                            <constraint firstItem="T4X-9q-XR2" firstAttribute="leading" secondItem="iIn-uJ-0ie" secondAttribute="leading" id="N7A-P6-ljJ"/>
+                            <constraint firstItem="T4X-9q-XR2" firstAttribute="top" secondItem="iIn-uJ-0ie" secondAttribute="top" id="bwL-zb-olC"/>
+                            <constraint firstItem="T4X-9q-XR2" firstAttribute="bottom" secondItem="knD-wI-keW" secondAttribute="top" id="xba-Be-efo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZQZ-Ry-4EX"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentWebView" destination="T4X-9q-XR2" id="012-0e-iGn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0l0-nQ-yaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2719" y="2275"/>
+        </scene>
+    </scenes>
+</document>

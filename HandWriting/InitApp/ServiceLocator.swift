@@ -23,6 +23,14 @@ class ServiceLocator {
         return BothamStoryboard(name: "Main")
     }
     
+    private func provideHomeStoryboard() -> BothamStoryboard {
+        return BothamStoryboard(name: "Home")
+    }
+    
+    private func provideHomeDtailStoryboard() -> BothamStoryboard {
+        return BothamStoryboard(name: "HomeDtail")
+    }
+    
     private func providePageHomeWireframe() -> PageHomeWireframe {
         return PageHomeWireframe()
     }
@@ -261,7 +269,7 @@ class ServiceLocator {
         return viewController
     }
     func provideStudyViewController() -> StudyViewController {
-        let viewController: StudyViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: StudyViewController = provideHomeStoryboard().instantiateViewController()
         let presenter = StudyPresenter(ui: viewController, wireframe: providePageHomeWireframe())
         viewController.presenter = presenter
         let dataSource = provideStudyTableViewDataSource()
@@ -423,7 +431,7 @@ class ServiceLocator {
     
     //MARK: - StudyDetail
     func provideStudyDetailViewController(detailData: NSMutableDictionary) -> StudyDetailViewController {
-        let viewController: StudyDetailViewController = provideMainStoryboard().instantiateViewController("StudyDetailViewController")
+        let viewController: StudyDetailViewController = provideHomeDtailStoryboard().instantiateViewController("StudyDetailViewController")
         let presenter = provideStudyDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
         return viewController
