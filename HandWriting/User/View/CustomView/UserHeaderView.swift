@@ -59,7 +59,7 @@ class UserHeaderView: UIView {
         //MARK: - 布局控件
         
         bgView.left = 0
-        bgView.top = 0
+        bgView.top = 2
         bgView.width = self.width
         bgView.height = self.height
 //        bgView.backgroundColor = UIColor.init(red: 0.5, green: 0.8, blue: 0.6, alpha: 1)
