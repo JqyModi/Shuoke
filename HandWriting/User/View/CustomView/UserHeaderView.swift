@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol UserHeaderViewDelegate {
     func loginOrInfoTextDidClick()
@@ -38,7 +39,10 @@ class UserHeaderView: UIView {
         loginBtn.setTitle(loginUser?.loginOrInfoText ?? "点击登录", for: .normal)
         leftBtn.setTitle(loginUser?.nick ?? "—", for: .normal)
         rightBtn.setTitle(loginUser?.school ?? "—", for: .normal)
-        imgView.sd_setImage(with: URL(string: loginUser?.iconView ?? ""), placeholderImage: UIImage(named: "user_icon"))
+        let urlStr = loginUser?.iconView
+        debugPrint("loginUser?.iconView >>> \(urlStr!)")
+        //options:SDWebImageRefreshCached：刷新缓存
+        imgView.sd_setImage(with: URL(string: urlStr!), placeholderImage: UIImage(named: "user_icon"), options: [SDWebImageOptions.refreshCached, SDWebImageOptions.cacheMemoryOnly])
     }
     
     private func setupUI() {
@@ -58,10 +62,8 @@ class UserHeaderView: UIView {
         bgView.top = 0
         bgView.width = self.width
         bgView.height = self.height
-        
-        //        bgView.bottom = SCREEN_HEIGHT/3
-        //        bgView.right = SCREEN_WIDTH
-        //        bgView.backgroundColor = UIColor.init(red: 0.5, green: 0.8, blue: 0.6, alpha: 1)
+//        bgView.backgroundColor = UIColor.init(red: 0.5, green: 0.8, blue: 0.6, alpha: 1)
+        bgView.backgroundColor = UIColor.clear
         
         updateProfile.left = bgView.left + 10
         updateProfile.top = bgView.top + 10
@@ -153,7 +155,7 @@ class UserHeaderView: UIView {
 
     lazy private var bgView: UIView = {
         let bgView = UIView()
-        bgView.backgroundColor = UIColor.randomColor()
+//        bgView.backgroundColor = UIColor.randomColor()
         bgView.sizeToFit()
         return bgView
     }()

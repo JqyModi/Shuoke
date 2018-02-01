@@ -145,13 +145,11 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
         var avatar = UIImage()
         var avatarPath = ""
         do {
-            if let path = UserDefaults.standard.object(forKey: Avatar) {
-                //                avatar = try UIImage(data: NSData(contentsOf: URL(string: BASEURL + (path as! String))!) as Data)!
-                avatarPath = path as! String
+            if let path = UserDefaults.standard.object(forKey: Avatar) as? String {
+                avatarPath = path
             }else if let loginUser = UserServece.readWithNSKeyedUnarchiver() as? LoginUser {
                 let path = loginUser.avatar
                 avatarPath = path!
-                //                avatar = try UIImage(data: NSData(contentsOf: URL(string: BASEURL + path!)!) as Data)!
             }else{
                 avatar = UIImage(named: "user_icon")!
             }
@@ -163,6 +161,7 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
         //封装用户数据
         let headerModel = HeaderModel(nick: self.nick, school: self.school, loginOrInfoText: self.loginOrInfoText, iconView: avatarPath)
         if let headerView = self.tableView.tableHeaderView as? UserHeaderView {
+            debugPrint("headerModel.iconView = \(headerModel.iconView)")
             headerView.loginUser = headerModel
         }
     }
@@ -220,6 +219,10 @@ extension UserViewController: UserWireframeDelegate, UserHeaderViewDelegate {
             //将头像路径持久化到本地
             debugPrint("path = \(path)")
             UserDefaults.standard.setValue(path, forKey: Avatar)
+            //保存数据
+            UserDefaults.standard.synchronize()
+            //刷新HeaderView数据
+            self.refreshData()
         })
     }
     
