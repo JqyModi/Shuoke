@@ -28,7 +28,15 @@ class ServiceLocator {
     }
     
     private func provideHomeDtailStoryboard() -> BothamStoryboard {
-        return BothamStoryboard(name: "HomeDtail")
+        return BothamStoryboard(name: "HomeDetail")
+    }
+    
+    private func provideUserStoryboard() -> BothamStoryboard {
+        return BothamStoryboard(name: "User")
+    }
+    
+    private func provideWritingDetailStoryboard() -> BothamStoryboard {
+        return BothamStoryboard(name: "WritingDetail")
     }
     
     private func providePageHomeWireframe() -> PageHomeWireframe {
@@ -211,7 +219,7 @@ class ServiceLocator {
     
     //MARK: - HomeTab
     func provideDailyViewController() -> DailyViewController {
-        let viewController: DailyViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: DailyViewController = provideHomeStoryboard().instantiateViewController()
         let presenter = DailyPresenter(ui: viewController, wireframe: providePageHomeWireframe())
         viewController.presenter = presenter
         let dataSource = provideDailyTableViewDataSource()
@@ -222,7 +230,7 @@ class ServiceLocator {
         return viewController
     }
     func provideCopyBookViewController() -> CopyBookViewController {
-        let viewController: CopyBookViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: CopyBookViewController = provideHomeStoryboard().instantiateViewController()
         let presenter = CopyBookPresenter(ui: viewController, wireframe: providePageHomeWireframe())
         viewController.presenter = presenter
         let dataSource = provideCopyBookTableViewDataSource()
@@ -233,7 +241,7 @@ class ServiceLocator {
         return viewController
     }
     func provideLectureViewController() -> LectureViewController {
-        let viewController: LectureViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: LectureViewController = provideHomeStoryboard().instantiateViewController()
         let presenter = LecturePresenter(ui: viewController, wireframe: providePageHomeWireframe())
         viewController.presenter = presenter
         let dataSource = provideLectureTableViewDataSource()
@@ -247,7 +255,7 @@ class ServiceLocator {
         return viewController
     }
     func provideSightViewController() -> SightViewController {
-        let viewController: SightViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: SightViewController = provideHomeStoryboard().instantiateViewController()
         let presenter = SightPresenter(ui: viewController, wireframe: providePageHomeWireframe())
         viewController.presenter = presenter
         let dataSource = provideSightTableViewDataSource()
@@ -258,7 +266,7 @@ class ServiceLocator {
         return viewController
     }
     func provideFamousViewController() -> FamousViewController {
-        let viewController: FamousViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: FamousViewController = provideHomeStoryboard().instantiateViewController()
         let presenter = FamousPresenter(ui: viewController, wireframe: providePageHomeWireframe())
         viewController.presenter = presenter
         let dataSource = provideFamousTableViewDataSource()
@@ -308,7 +316,7 @@ class ServiceLocator {
     }
     
     func provideRecordViewController() -> RecordViewController1 {
-        let viewController: RecordViewController1 = provideMainStoryboard().instantiateViewController()
+        let viewController: RecordViewController1 = provideUserStoryboard().instantiateViewController()
         let presenter = RecordPresenter(ui: viewController, wireframe: provideRecordWireframe())
         viewController.presenter = presenter
         let dataSource = provideRecordTableViewDataSource()
@@ -320,7 +328,7 @@ class ServiceLocator {
     }
     
     func provideDownloadViewController() -> DownloadViewController {
-        let viewController: DownloadViewController = provideMainStoryboard().instantiateViewController()
+        let viewController: DownloadViewController = provideUserStoryboard().instantiateViewController()
         let presenter = DownloadPresenter(ui: viewController, wireframe: provideDownloadWireframe())
         viewController.presenter = presenter
         let dataSource = provideDownloadTableViewDataSource()
@@ -372,7 +380,7 @@ class ServiceLocator {
     
     //MARK: - WritingDetail
     func provideWritingDetailViewController(_ writingName: String) -> WritingDetailViewController {
-        let viewController: WritingDetailViewController = provideMainStoryboard().instantiateViewController("WritingDetailViewController")
+        let viewController: WritingDetailViewController = provideWritingDetailStoryboard().instantiateViewController("WritingDetailViewController")
         let presenter = provideWritingDetailPresenter(viewController, writingName: writingName)
         //设置代理
         presenter.writingDetailPresenterDelegate = viewController.self
@@ -399,7 +407,7 @@ class ServiceLocator {
     
     //MARK: - DailyDetail
     func provideDailyDetailViewController(detailData: NSMutableDictionary) -> DailyDetailViewController {
-        let viewController: DailyDetailViewController = provideMainStoryboard().instantiateViewController("DailyDetailViewController")
+        let viewController: DailyDetailViewController = provideHomeDtailStoryboard().instantiateViewController("DailyDetailViewController")
         let presenter = provideDailyDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
         return viewController
@@ -409,7 +417,7 @@ class ServiceLocator {
     }
     //MARK: - SightDetail
     func provideSightDetailViewController(detailData: NSMutableDictionary) -> SightDetailViewController {
-        let viewController: SightDetailViewController = provideMainStoryboard().instantiateViewController("SightDetailViewController")
+        let viewController: SightDetailViewController = provideHomeDtailStoryboard().instantiateViewController("SightDetailViewController")
         let presenter = provideSightDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
         return viewController
@@ -420,7 +428,7 @@ class ServiceLocator {
     
     //MARK: - FamousDetail
     func provideFamousDetailViewController(detailData: NSMutableDictionary) -> FamousDetailViewController {
-        let viewController: FamousDetailViewController = provideMainStoryboard().instantiateViewController("FamousDetailViewController")
+        let viewController: FamousDetailViewController = provideHomeDtailStoryboard().instantiateViewController("FamousDetailViewController")
         let presenter = provideFamousDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
         return viewController
@@ -442,7 +450,7 @@ class ServiceLocator {
     
     //MARK: - CopyBookDetail
     func provideCopyBookDetailViewController(detailData: NSMutableDictionary) -> CopyBookDetailViewController {
-        let viewController: CopyBookDetailViewController = provideMainStoryboard().instantiateViewController("CopyBookDetailViewController")
+        let viewController: CopyBookDetailViewController = provideHomeDtailStoryboard().instantiateViewController("CopyBookDetailViewController")
         let presenter = provideCopyBookDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
         
@@ -454,7 +462,7 @@ class ServiceLocator {
     
     //MARK: - LectureDetail
     func provideLectureDetailViewController(detailData: NSMutableDictionary) -> LectureDetailViewController {
-        let viewController: LectureDetailViewController = provideMainStoryboard().instantiateViewController("LectureDetailViewController")
+        let viewController: LectureDetailViewController = provideHomeDtailStoryboard().instantiateViewController("LectureDetailViewController")
         let presenter = provideLectureDetailPresenter(viewController, detailData: detailData)
         viewController.presenter = presenter
         return viewController
@@ -494,7 +502,7 @@ class ServiceLocator {
     
     //MARK: - AccountView
     func provideAccountViewController(item: User) -> AccountViewController {
-        let viewController: AccountViewController = provideMainStoryboard().instantiateViewController("AccountViewController")
+        let viewController: AccountViewController = provideUserStoryboard().instantiateViewController("AccountViewController")
         let presenter = provideAccountPresenter(viewController, item: item)
         viewController.presenter = presenter
         //设置刷新界面委托 

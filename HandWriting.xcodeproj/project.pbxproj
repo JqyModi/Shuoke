@@ -130,6 +130,8 @@
 		04472D2B1F70C076002A8B33 /* RecordViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04472D2A1F70C076002A8B33 /* RecordViewController1.swift */; };
 		044DB7B11F985A5500237253 /* SexChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DB7B01F985A5500237253 /* SexChoiceView.swift */; };
 		0466645F1F53C5A30030254C /* WritingStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466645E1F53C5A30030254C /* WritingStartViewController.swift */; };
+		046A9A2A2022A43400E071A6 /* WritingDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A9A292022A43400E071A6 /* WritingDetail.storyboard */; };
+		046A9A2E2022A75B00E071A6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A9A2D2022A75B00E071A6 /* User.storyboard */; };
 		046FAA6A1FA1C43000627A25 /* DownloadNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FAA691FA1C43000627A25 /* DownloadNavigationController.swift */; };
 		048F1F9A1F988131009AFF20 /* SexChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F1F991F988131009AFF20 /* SexChoiceView.xib */; };
 		0498AEC51F5A467D0068F82F /* IndicatorPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC41F5A467D0068F82F /* IndicatorPagerViewController.swift */; };
@@ -383,6 +385,8 @@
 		04472D2A1F70C076002A8B33 /* RecordViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController1.swift; sourceTree = "<group>"; };
 		044DB7B01F985A5500237253 /* SexChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexChoiceView.swift; sourceTree = "<group>"; };
 		0466645E1F53C5A30030254C /* WritingStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingStartViewController.swift; sourceTree = "<group>"; };
+		046A9A292022A43400E071A6 /* WritingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingDetail.storyboard; sourceTree = "<group>"; };
+		046A9A2D2022A75B00E071A6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		046FAA691FA1C43000627A25 /* DownloadNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadNavigationController.swift; sourceTree = "<group>"; };
 		048F1F991F988131009AFF20 /* SexChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SexChoiceView.xib; sourceTree = "<group>"; };
 		0498AEC41F5A467D0068F82F /* IndicatorPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorPagerViewController.swift; sourceTree = "<group>"; };
@@ -1124,6 +1128,8 @@
 				04D3AB511F4672AC00C09DAA /* LaunchScreen.storyboard */,
 				049FF3AF2021BE9C00631F9E /* Home.storyboard */,
 				049FF3B12021C24100631F9E /* HomeDetail.storyboard */,
+				046A9A292022A43400E071A6 /* WritingDetail.storyboard */,
+				046A9A2D2022A75B00E071A6 /* User.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -1906,6 +1912,7 @@
 				042F79042003621600EDBFBB /* 宋词300首.txt in Resources */,
 				042F79052003621600EDBFBB /* 名人名言.txt in Resources */,
 				04D3AB531F4672AC00C09DAA /* LaunchScreen.storyboard in Resources */,
+				046A9A2E2022A75B00E071A6 /* User.storyboard in Resources */,
 				042F79172003622300EDBFBB /* 钟齐翰墨毛笔.ttf in Resources */,
 				042F79122003622300EDBFBB /* 草书.TTF in Resources */,
 				042F79392003658D00EDBFBB /* ico_make.png in Resources */,
@@ -1922,6 +1929,7 @@
 				042F79142003622300EDBFBB /* 隶书.TTF in Resources */,
 				042F79112003622300EDBFBB /* 欧体.TTF in Resources */,
 				04D3AB4B1F4672AC00C09DAA /* Main.storyboard in Resources */,
+				046A9A2A2022A43400E071A6 /* WritingDetail.storyboard in Resources */,
 				042F79022003621600EDBFBB /* 唐诗300首.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
