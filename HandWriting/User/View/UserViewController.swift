@@ -67,6 +67,10 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
         super.viewWillAppear(animated)
         
         configTheme()
+        
+        //显示用户信息
+        showUserInfo()
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
