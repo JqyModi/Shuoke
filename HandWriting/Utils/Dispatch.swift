@@ -315,6 +315,7 @@ func updateUserInfo(loginUser: LoginUser){
                 SVProgressHUD.showInfo(withStatus: message)
                 return
             }
+            //显示时间过长
             SVProgressHUD.showSuccess(withStatus: message)
         }
     }

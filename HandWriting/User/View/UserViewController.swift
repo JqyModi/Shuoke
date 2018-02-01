@@ -141,146 +141,41 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
     }
     
     func refreshData(){
-        self.leftBtn?.setTitle(self.nick, for: .normal)
-        self.rightBtn?.setTitle(self.school, for: .normal)
-        self.loginBtn?.setTitle(self.loginOrInfoText, for: .normal)
         //设置用户头像
         var avatar = UIImage()
         var avatarPath = ""
         do {
             if let path = UserDefaults.standard.object(forKey: Avatar) {
-//                avatar = try UIImage(data: NSData(contentsOf: URL(string: BASEURL + (path as! String))!) as Data)!
+                //                avatar = try UIImage(data: NSData(contentsOf: URL(string: BASEURL + (path as! String))!) as Data)!
                 avatarPath = path as! String
             }else if let loginUser = UserServece.readWithNSKeyedUnarchiver() as? LoginUser {
                 let path = loginUser.avatar
                 avatarPath = path!
-//                avatar = try UIImage(data: NSData(contentsOf: URL(string: BASEURL + path!)!) as Data)!
+                //                avatar = try UIImage(data: NSData(contentsOf: URL(string: BASEURL + path!)!) as Data)!
             }else{
                 avatar = UIImage(named: "user_icon")!
             }
         } catch {
             debugPrint("异常")
         }
-        
         avatarPath = BASEURL + avatarPath.dropFirst().description
         debugPrint("avatarPath = \(avatarPath)")
-        self.imgView?.sd_setImage(with: URL(string: avatarPath), placeholderImage: UIImage(named: "user_icon"))
-//        self.imgView?.image = avatar
+        //封装用户数据
+        let headerModel = HeaderModel(nick: self.nick, school: self.school, loginOrInfoText: self.loginOrInfoText, iconView: avatarPath)
+        if let headerView = self.tableView.tableHeaderView as? UserHeaderView {
+            headerView.loginUser = headerModel
+        }
     }
     
-    func configHeaderView(){
-        let bgView = UIView()
-        bgView.top = 0
-        bgView.width = UIScreen.main.bounds.width
-        bgView.height = UIScreen.main.bounds.height/3
-//        bgView.bottom = SCREEN_HEIGHT/3
-        bgView.left = 0
-//        bgView.right = SCREEN_WIDTH
-//        bgView.backgroundColor = UIColor.init(red: 0.5, green: 0.8, blue: 0.6, alpha: 1)
-        
-        // CBMaterialTabbarItem / CBMDTabbarController
-
+    func configHeaderView() {
         let tabBarItem1 = self.tabBarItem as! CBMaterialTabbarItem
         let color = tabBarItem1.rippleLayerColor
-        bgView.backgroundColor = color
         
-        let updateProfile = UIButton()
-        updateProfile.left = bgView.left + 10
-        updateProfile.top = bgView.top + 10
-        updateProfile.width = 32
-        updateProfile.height = 32
-        updateProfile.setImage(UIImage(named: "updateProfile"), for: .normal)
-        updateProfile.tag = 101
-        
-        imgView = UIImageView()
-        imgView!.centerX = bgView.centerX - 80/2
-        imgView!.centerY = bgView.centerY - 80/2 - 30
-        imgView!.width = 80
-        imgView!.height = 80
-        //设置遮罩
-        imgView!.layer.masksToBounds = true
-        //先遮罩再圆角
-        imgView!.layer.cornerRadius = 80/2
-        imgView!.layer.borderWidth = 2
-        imgView!.layer.borderColor = UIColor.white.cgColor
-        imgView!.contentMode = .scaleAspectFill
-        
-        imgView!.image = UIImage(named: "user_icon")
-        imgView!.tag = 102
-        
-        
-        loginBtn = UIButton()
-        loginBtn?.centerX = 20
-        loginBtn?.centerY = imgView!.centerY + imgView!.height/2  - 21/2 + 15
-        loginBtn?.width = bgView.width - 40
-        loginBtn?.height = 21
-        loginBtn?.setTitle(loginOrInfoText, for: .normal)
-        loginBtn?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        loginBtn?.contentMode = .center
-        loginBtn?.setTitleColor(UIColor.white, for: .normal)
-        loginBtn?.setImage(UIImage(named: "cupcake"), for: .normal)
-        loginBtn?.imageView?.frame = CGRect(x: (loginBtn?.frame.width)! - 20, y: ((loginBtn?.height)!-20)/2, width: 20, height: 20)
-        loginBtn?.tag = 103
-        
-        bgView.addSubview(updateProfile)
-        bgView.addSubview(imgView!)
-        bgView.addSubview((loginBtn)!)
-        
-        let bgBottomView = UIView()
-        bgBottomView.left = bgView.left
-        bgBottomView.top = bgView.bottom - 50
-        bgBottomView.width = bgView.right
-        bgBottomView.height = 50
-        bgBottomView.backgroundColor = UIColor.init(red: 0.7, green: 0.7, blue: 0.7, alpha: 0.3)
-        
-        leftBtn = UIButton()
-        leftBtn?.left = bgBottomView.left
-        leftBtn?.top = bgBottomView.top
-        leftBtn?.width = bgBottomView.width/2 - 1
-        leftBtn?.height = bgBottomView.height
-        leftBtn?.setTitle(nick, for: .normal)
-        leftBtn?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        leftBtn?.contentMode = .center
-        leftBtn?.setTitleColor(UIColor.white, for: .normal)
-        leftBtn?.backgroundColor = UIColor.clear
-        leftBtn?.tag = 104
-        
-        let middleView = UIView()
-        middleView.width = 2
-        middleView.height = (leftBtn?.height)!
-        middleView.left = (leftBtn?.right)!
-        middleView.top = (leftBtn?.top)!
-        middleView.backgroundColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
-        
-        rightBtn = UIButton()
-        rightBtn?.left = bgBottomView.width/2 + 1
-        rightBtn?.top = bgBottomView.top
-        rightBtn?.width = bgBottomView.right/2
-        rightBtn?.height = bgBottomView.height
-        rightBtn?.setTitle(school, for: .normal)
-        rightBtn?.contentMode = .center
-        rightBtn?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        rightBtn?.setTitleColor(UIColor.white, for: .normal)
-        rightBtn?.backgroundColor = UIColor.clear
-        rightBtn?.tag = 105
-
-        bgView.addSubview(leftBtn!)
-        bgView.addSubview(middleView)
-        bgView.addSubview(rightBtn!)
-        //子布局以一级父布局作为参照（0,0）
-        bgView.insertSubview(bgBottomView, belowSubview: leftBtn!)
-        self.tableView.tableHeaderView = bgView
-        
-        updateProfile.addTarget(self, action: #selector(UserViewController.updateProfileAction), for: .touchUpInside)
-        loginBtn?.addTarget(self, action: #selector(UserViewController.loginBtnAction), for: .touchUpInside)
-        leftBtn?.addTarget(self, action: #selector(UserViewController.leftBtnAction), for: .touchUpInside)
-        rightBtn?.addTarget(self, action: #selector(UserViewController.rightBtnAction), for: .touchUpInside)
-        //设置图片点击事件:先设置可以用户交互
-        imgView!.isUserInteractionEnabled = true
-        //添加手势
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UserViewController.imgViewAction))
-        imgView!.addGestureRecognizer(tap)
-        
+        let headerView = UserHeaderView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT/3))
+        headerView.backgroundColor = color
+        headerView.loginUser = HeaderModel(nick: self.nick, school: self.school, loginOrInfoText: self.loginOrInfoText, iconView: "")
+        headerView.updateHeaderdelegate = self
+        self.tableView.tableHeaderView = headerView
     }
     
     func updateProfileAction(){
@@ -289,13 +184,6 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
     }
     func loginBtnAction(){
         self.showDetailDelegate?.showDetaiView(tag: 103)
-//        self.showDetailViewController(LoginViewController(), sender: nil)
-    }
-    func leftBtnAction(){
-        self.showDetailDelegate?.showDetaiView(tag: 104)
-    }
-    func rightBtnAction(){
-        self.showDetailDelegate?.showDetaiView(tag: 105)
     }
     func imgViewAction(){
         self.showDetailDelegate?.showDetaiView(tag: 102)
@@ -307,7 +195,9 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
     }
 }
 
-extension UserViewController: UserWireframeDelegate{
+extension UserViewController: UserWireframeDelegate, UserHeaderViewDelegate {
+    
+    //MARK: - 相册获取头像并处理
     func getPhoto(img: UIImage) {
         //压缩图片
         self.imgView?.image = img
@@ -331,6 +221,19 @@ extension UserViewController: UserWireframeDelegate{
             debugPrint("path = \(path)")
             UserDefaults.standard.setValue(path, forKey: Avatar)
         })
-        
     }
+    
+    //MARK: - HeaderViewDelegate
+    func loginOrInfoTextDidClick() {
+        self.loginBtnAction()
+    }
+    
+    func updateProfileDidClick() {
+        self.updateProfileAction()
+    }
+    
+    func imgViewDidClick() {
+        self.imgViewAction()
+    }
+    
 }

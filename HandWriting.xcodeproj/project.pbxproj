@@ -132,6 +132,8 @@
 		0466645F1F53C5A30030254C /* WritingStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466645E1F53C5A30030254C /* WritingStartViewController.swift */; };
 		046A9A2A2022A43400E071A6 /* WritingDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A9A292022A43400E071A6 /* WritingDetail.storyboard */; };
 		046A9A2E2022A75B00E071A6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A9A2D2022A75B00E071A6 /* User.storyboard */; };
+		046A9A312022BA4900E071A6 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A9A302022BA4900E071A6 /* UserHeaderView.swift */; };
+		046A9A352022EB6F00E071A6 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A9A342022EB6F00E071A6 /* HeaderModel.swift */; };
 		046FAA6A1FA1C43000627A25 /* DownloadNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FAA691FA1C43000627A25 /* DownloadNavigationController.swift */; };
 		048F1F9A1F988131009AFF20 /* SexChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F1F991F988131009AFF20 /* SexChoiceView.xib */; };
 		0498AEC51F5A467D0068F82F /* IndicatorPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC41F5A467D0068F82F /* IndicatorPagerViewController.swift */; };
@@ -387,6 +389,8 @@
 		0466645E1F53C5A30030254C /* WritingStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingStartViewController.swift; sourceTree = "<group>"; };
 		046A9A292022A43400E071A6 /* WritingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingDetail.storyboard; sourceTree = "<group>"; };
 		046A9A2D2022A75B00E071A6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		046A9A302022BA4900E071A6 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		046A9A342022EB6F00E071A6 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		046FAA691FA1C43000627A25 /* DownloadNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadNavigationController.swift; sourceTree = "<group>"; };
 		048F1F991F988131009AFF20 /* SexChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SexChoiceView.xib; sourceTree = "<group>"; };
 		0498AEC41F5A467D0068F82F /* IndicatorPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorPagerViewController.swift; sourceTree = "<group>"; };
@@ -1084,6 +1088,15 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		046A9A2F2022BA0E00E071A6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				046A9A302022BA4900E071A6 /* UserHeaderView.swift */,
+				046A9A342022EB6F00E071A6 /* HeaderModel.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		046D63E91FD5333200445CFA /* db */ = {
 			isa = PBXGroup;
 			children = (
@@ -1661,6 +1674,7 @@
 		04D3AB961F468BBD00C09DAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				046A9A2F2022BA0E00E071A6 /* CustomView */,
 				04C180EC1F4BC0D200EC6066 /* TableView */,
 				04C180EA1F4BC05D00EC6066 /* UserUI.swift */,
 				04C180ED1F4BC0EA00EC6066 /* UserViewController.swift */,
@@ -2037,6 +2051,7 @@
 				04E018481F4FD0220027E662 /* FamousNavigationController.swift in Sources */,
 				0403765D1F5F765700582BD3 /* NetworkTools.swift in Sources */,
 				0435C20D1FA1AE410043D194 /* Download.swift in Sources */,
+				046A9A312022BA4900E071A6 /* UserHeaderView.swift in Sources */,
 				04472D2B1F70C076002A8B33 /* RecordViewController1.swift in Sources */,
 				04309BFC1F4D73DF00A54BBB /* DailyWireframe.swift in Sources */,
 				0435C2101FA1AE730043D194 /* DownloadPresenter.swift in Sources */,
@@ -2199,6 +2214,7 @@
 				04C988581F4E542A00321DD2 /* StudyTableViewCell.swift in Sources */,
 				041A3FA01F4FF7EF005E23E9 /* CopyBookNavigationController.swift in Sources */,
 				04309C181F4D767600A54BBB /* StudyUI.swift in Sources */,
+				046A9A352022EB6F00E071A6 /* HeaderModel.swift in Sources */,
 				043C8C7D1FC276BC00037495 /* SearchViewController.swift in Sources */,
 				040FF3E41F4AD2A20099DF34 /* VideoWireframe.swift in Sources */,
 				04309C0A1F4D75F600A54BBB /* Sight.swift in Sources */,
