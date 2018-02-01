@@ -330,9 +330,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Z7-5A-XpH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Z7-5A-XpH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="97" id="Ceg-UA-FB4" customClass="SearchTableViewCell" customModule="HandWriting" customModuleProvider="target">
@@ -384,6 +383,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Z7-5A-XpH" secondAttribute="trailing" id="SyI-ta-OaN"/>
+                            <constraint firstItem="9Z7-5A-XpH" firstAttribute="top" secondItem="Yok-2W-TEj" secondAttribute="top" id="mYa-VA-24s"/>
+                            <constraint firstItem="aXK-fQ-lpf" firstAttribute="top" secondItem="9Z7-5A-XpH" secondAttribute="bottom" id="rAA-l9-n7P"/>
+                            <constraint firstItem="9Z7-5A-XpH" firstAttribute="leading" secondItem="Yok-2W-TEj" secondAttribute="leading" id="vbg-g1-0jT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="搜索" id="0M6-BJ-Yki">
                         <barButtonItem key="leftBarButtonItem" image="back" id="J0B-mR-fKm">
@@ -399,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gl7-ME-XGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="-174"/>
+            <point key="canvasLocation" x="1101.5" y="-174.5"/>
         </scene>
         <!--主页-->
         <scene sceneID="x2S-wU-Sm9">
