@@ -14,6 +14,43 @@ import SVProgressHUD
 
 class HomeViewPagerController: HandWritingViewController {
     
+//    //MARK: - 访客模式
+//    //添加用户是否登录标记
+//    var userLogin = UserServece.checkLogin()
+//    var visitorLoginView: VisitorLoginView?
+//    //loadVIew是苹果专门为手写代码 准备的  等效与 sb / xib
+//    //一旦实现这个方法  xib / sb就自动失效
+//    //会自动检测 view是否为空  如果为空 会自动调用 loadView方法
+//    override func loadView() {
+//        userLogin ? super.loadView() : loadVisitorView()
+//    }
+//
+////    override func viewWillLayoutSubviews() {
+////        userLogin ? super.viewWillLayoutSubviews() : loadVisitorView()
+////    }
+//
+//    private func loadVisitorView() {
+//        //view的大小  在 viewDidLoad就会设置
+//        visitorLoginView = VisitorLoginView()
+//        //设置代理
+//        visitorLoginView?.visitorDelegate = self
+//        view = visitorLoginView
+//
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: "visitorWillRegister")
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: "visitorWillLogin")
+//
+//    }
+//
+//    //MARK:visitorDelegate 协议方法
+//    func visitorWillRegister() {
+//        print("come on")
+//    }
+//
+//    func visitorWillLogin() {
+//        print("come in")
+//    }
+    
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     let tabs1: [ViewPagerTab] = [
@@ -113,7 +150,10 @@ class HomeViewPagerController: HandWritingViewController {
         //解决状态栏遮挡
 //        viewPager.view.top = 21
         self.addChildViewController(viewPager)
-        self.view.addSubview(viewPager.view)
+        //登录才显示
+        if userLogin {
+            self.view.addSubview(viewPager.view)
+        }
         viewPager.didMove(toParentViewController: self)
         
         //测试看下一次进入时是否记录token

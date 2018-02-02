@@ -74,7 +74,6 @@ class RootWireframe: HandWritingWireframe {
         let downloadNavigationController = serviceLocator.provideRecordNavigationController()
         serviceLocator.navigatorContainer.register(navigationController: downloadNavigationController)
         
-        
         return [
             homePageViewNavigationController,
             writingNavigationController,

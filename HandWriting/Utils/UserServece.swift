@@ -10,9 +10,10 @@ import Foundation
 
 class UserServece {
     static func checkLogin() -> Bool {
-        let token = UserDefaults.standard.object(forKey: accessToken) as! String
-        if token != "" && token.characters.count > 0 {
-            return true
+        if let token = UserDefaults.standard.object(forKey: accessToken) as? String {
+            if token != "" && token.characters.count > 0 {
+                return true
+            }
         }
         return false
     }

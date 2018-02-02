@@ -18,6 +18,42 @@ protocol VideoViewControllerDelegate{
 }
 class VideoViewController: HandWritingViewController, BothamTableViewController, VideoUI {
     
+//    //MARK: - 访客模式
+//    //添加用户是否登录标记
+//    var userLogin = UserServece.checkLogin()
+//    var visitorLoginView: VisitorLoginView?
+//    //loadVIew是苹果专门为手写代码 准备的  等效与 sb / xib
+//    //一旦实现这个方法  xib / sb就自动失效
+//    //会自动检测 view是否为空  如果为空 会自动调用 loadView方法
+//    override func loadView() {
+//        userLogin ? super.loadView() : loadVisitorView()
+//    }
+//
+//    //    override func viewWillLayoutSubviews() {
+//    //        userLogin ? super.viewWillLayoutSubviews() : loadVisitorView()
+//    //    }
+//
+//    private func loadVisitorView() {
+//        //view的大小  在 viewDidLoad就会设置
+//        visitorLoginView = VisitorLoginView()
+//        //设置代理
+//        visitorLoginView?.visitorDelegate = self
+//        view.addSubview(visitorLoginView!)
+//
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: "visitorWillRegister")
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: "visitorWillLogin")
+//
+//    }
+//
+//    //MARK:visitorDelegate 协议方法
+//    func visitorWillRegister() {
+//        print("come on")
+//    }
+//
+//    func visitorWillLogin() {
+//        print("come in")
+//    }
+    
     var dataBihua = NSMutableArray()
     var dataPianpang = NSMutableArray()
     var dataJiegou = NSMutableArray()
@@ -44,6 +80,10 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
     var delegate1: UITableViewDelegate!
     var isLoadMoreData = false
     
+//    override func viewWillLayoutSubviews() {
+//        userLogin ? super.viewWillLayoutSubviews() : toLoginController()
+//    }
+    
     override func viewDidLoad() {
         tableView.dataSource = dataSource
         tableView.delegate = self
@@ -69,6 +109,16 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
         //初始化菜单放在此方法中：横竖屏切换需要重新初始化
         configDropDownMenu()
         configureNavigationBar()
+    }
+    
+    /*
+     跳转到登录页
+     */
+    func toLoginController(){
+        let viewController = LoginViewController()
+        debugPrint("跳转登录页")
+        viewController.title = "登录"
+        ServiceLocator.sharedInstance.provideVideoNavigator()?.present(viewController, animated: true, completion: nil)
     }
     
     func configTheme(){

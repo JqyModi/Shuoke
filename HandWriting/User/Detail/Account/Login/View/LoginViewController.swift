@@ -28,8 +28,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.loginViewBGColor
         initView()
-        //改变导航按钮着色
-        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +36,13 @@ class LoginViewController: UIViewController {
     }
     
     func initView(){
-        navigationBarHeight = (self.navigationController?.navigationBar.height)!
-        tabbarHeight = (self.tabBarController?.tabBar.height)!
-        
+        //改变导航按钮着色
+        if (navigationController != nil) {
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+            navigationBarHeight = (self.navigationController?.navigationBar.height)!
+            tabbarHeight = (self.tabBarController?.tabBar.height)!
+        }
+    
         loginView = LoginView(frame: CGRect(x: (SCREEN_WIDTH-300)/2, y: (SCREEN_HEIGHT-300-navigationBarHeight-tabbarHeight)/2, width: 300, height: 300))
         loginView?.loginDelegate = self
         self.view.addSubview(loginView!)

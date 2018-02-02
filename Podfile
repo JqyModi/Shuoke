@@ -36,6 +36,8 @@ target "HandWriting" do
     pod "XHRefreshControl"
     #腾讯Bug搜集
     pod "Bugly"
+    #自动布局
+    pod "SnapKit"
 end
 
 
