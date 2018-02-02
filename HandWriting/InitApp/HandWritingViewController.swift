@@ -73,17 +73,30 @@ class HandWritingViewController: BothamViewController, BothamLoadingViewControll
         
         view.addSubview(visitorLoginView!)
         
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: "visitorWillRegister")
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: "visitorWillLogin")
+        title = "用户登录"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: "visitorWillRegister")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: "visitorWillLogin")
         
     }
     
     //MARK:visitorDelegate 协议方法
     func visitorWillRegister() {
-        print("come on")
+        debugPrint("come on")
     }
     
     func visitorWillLogin() {
-        print("come in")
+        debugPrint("come in")
+        toLoginController()
+    }
+    
+    /*
+     跳转到登录页
+     */
+    func toLoginController(){
+        let viewController = LoginViewController()
+        debugPrint("跳转登录页")
+        viewController.title = "登录"
+        ServiceLocator.sharedInstance.provideUserNavigator()?.present(viewController, animated: true, completion: nil)
     }
 }

@@ -114,12 +114,12 @@ class VideoViewController: HandWritingViewController, BothamTableViewController,
     /*
      跳转到登录页
      */
-    func toLoginController(){
-        let viewController = LoginViewController()
-        debugPrint("跳转登录页")
-        viewController.title = "登录"
-        ServiceLocator.sharedInstance.provideVideoNavigator()?.present(viewController, animated: true, completion: nil)
-    }
+//    func toLoginController(){
+//        let viewController = LoginViewController()
+//        debugPrint("跳转登录页")
+//        viewController.title = "登录"
+//        ServiceLocator.sharedInstance.provideVideoNavigator()?.present(viewController, animated: true, completion: nil)
+//    }
     
     func configTheme(){
         //判断当前主题
