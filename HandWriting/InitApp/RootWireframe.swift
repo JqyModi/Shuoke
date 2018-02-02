@@ -84,28 +84,31 @@ class RootWireframe: HandWritingWireframe {
     }
     
     private func configureTabBarItems(_ tabBar: UITabBar) {
-        tabBar.accessibilityLabel = "MainWireframe TabBar"
-        tabBar.tintColor = UIColor.tabBarTintColor
+        //隐藏系统默认TabBar 使用CBMDTabbar
+        tabBar.isHidden = true
         
-        let homeIcon = UIImage(named: "heart")
-        let homeTabBarItem = tabBar.items?[0]
-        homeTabBarItem?.image = homeIcon?.withRenderingMode(.alwaysOriginal)
-        homeTabBarItem?.selectedImage = homeIcon
-        
-        let writingIcon = UIImage(named: "news")
-        let writingTabBarItem = tabBar.items?[1]
-        writingTabBarItem?.image = writingIcon?.withRenderingMode(.alwaysOriginal)
-        writingTabBarItem?.selectedImage = writingIcon
-        
-        let videoIcon = UIImage(named: "news")
-        let videoTabBarItem = tabBar.items?[2]
-        videoTabBarItem?.image = videoIcon?.withRenderingMode(.alwaysOriginal)
-        videoTabBarItem?.selectedImage = videoIcon
-        
-        let userIcon = UIImage(named: "location")
-        let userTabBarItem = tabBar.items?[3]
-        userTabBarItem?.image = userIcon?.withRenderingMode(.alwaysOriginal)
-        userTabBarItem?.selectedImage = userIcon
+//        tabBar.accessibilityLabel = "MainWireframe TabBar"
+//        tabBar.tintColor = UIColor.tabBarTintColor
+//
+//        let homeIcon = UIImage(named: "heart")
+//        let homeTabBarItem = tabBar.items?[0]
+//        homeTabBarItem?.image = homeIcon?.withRenderingMode(.alwaysOriginal)
+//        homeTabBarItem?.selectedImage = homeIcon
+//
+//        let writingIcon = UIImage(named: "news")
+//        let writingTabBarItem = tabBar.items?[1]
+//        writingTabBarItem?.image = writingIcon?.withRenderingMode(.alwaysOriginal)
+//        writingTabBarItem?.selectedImage = writingIcon
+//
+//        let videoIcon = UIImage(named: "news")
+//        let videoTabBarItem = tabBar.items?[2]
+//        videoTabBarItem?.image = videoIcon?.withRenderingMode(.alwaysOriginal)
+//        videoTabBarItem?.selectedImage = videoIcon
+//
+//        let userIcon = UIImage(named: "location")
+//        let userTabBarItem = tabBar.items?[3]
+//        userTabBarItem?.image = userIcon?.withRenderingMode(.alwaysOriginal)
+//        userTabBarItem?.selectedImage = userIcon
     }
     /*
      隐藏导航栏

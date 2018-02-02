@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="321-lQ-tgt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3MT-By-3FF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,7 +93,7 @@
                                 <color key="value" red="0.0" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
-                                <color key="value" red="0.023091054553879522" green="0.29832559681697612" blue="0.26623695431734035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neC-og-iHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2058" y="664"/>
+            <point key="canvasLocation" x="-2172" y="663"/>
         </scene>
         <!--Materia Tabbar Controller-->
         <scene sceneID="Zpq-jr-Kvx">
@@ -195,7 +195,7 @@
                                 <color key="value" red="0.3529411764705882" green="0.23921568627450979" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
-                                <color key="value" red="0.13190005384007991" green="0.22599710712394402" blue="0.32758620689655171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -287,7 +287,7 @@
                                 <color key="value" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
-                                <color key="value" red="0.50627901193633951" green="0.44971134834438165" blue="0.30305838129149992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -298,25 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4G1-Pf-37k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-918" y="663"/>
-        </scene>
-        <!--Page Home View Controller-->
-        <scene sceneID="Dbl-q8-CWU">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pKw-oo-Dnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="321-lQ-tgt" customClass="PageHomeViewController" customModule="HandWriting" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OFh-pX-igm"/>
-                        <viewControllerLayoutGuide type="bottom" id="YHa-ju-orD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Y1R-ij-B8D">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-6" y="664"/>
+            <point key="canvasLocation" x="-802" y="663"/>
         </scene>
         <!--搜索-->
         <scene sceneID="aKD-L2-TPp">
@@ -404,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gl7-ME-XGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101.5" y="-174.5"/>
+            <point key="canvasLocation" x="1444" y="-176"/>
         </scene>
         <!--主页-->
         <scene sceneID="x2S-wU-Sm9">
@@ -428,7 +410,7 @@
                                 <color key="value" red="0.36862745098039218" green="0.66666666666666663" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
-                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -478,7 +460,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTb-zj-qU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="-174"/>
+            <point key="canvasLocation" x="721" y="-175"/>
         </scene>
     </scenes>
     <resources>

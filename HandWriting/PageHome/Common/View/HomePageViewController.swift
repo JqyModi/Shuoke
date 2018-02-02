@@ -138,7 +138,7 @@ class HomeViewPagerController: HandWritingViewController {
     private func configTabbarStyle(){
         let tabbarItem1 = tabBarItem as! CBMaterialTabbarItem
         tabbarItem1.rippleLayerColor = UIColor.Tabbar1Color
-        
+
         //改变导航按钮着色
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }

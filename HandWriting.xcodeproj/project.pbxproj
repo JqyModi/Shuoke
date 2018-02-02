@@ -135,6 +135,7 @@
 		046A9A312022BA4900E071A6 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A9A302022BA4900E071A6 /* UserHeaderView.swift */; };
 		046A9A352022EB6F00E071A6 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A9A342022EB6F00E071A6 /* HeaderModel.swift */; };
 		046FAA6A1FA1C43000627A25 /* DownloadNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FAA691FA1C43000627A25 /* DownloadNavigationController.swift */; };
+		047C43612023F3FF008F2114 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C43602023F3FF008F2114 /* UIDevice+Extension.swift */; };
 		048F1F9A1F988131009AFF20 /* SexChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F1F991F988131009AFF20 /* SexChoiceView.xib */; };
 		0498AEC51F5A467D0068F82F /* IndicatorPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC41F5A467D0068F82F /* IndicatorPagerViewController.swift */; };
 		0498AEC71F5A54A60068F82F /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AEC61F5A54A60068F82F /* CustomIndicator.swift */; };
@@ -392,6 +393,7 @@
 		046A9A302022BA4900E071A6 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		046A9A342022EB6F00E071A6 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		046FAA691FA1C43000627A25 /* DownloadNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadNavigationController.swift; sourceTree = "<group>"; };
+		047C43602023F3FF008F2114 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		048F1F991F988131009AFF20 /* SexChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SexChoiceView.xib; sourceTree = "<group>"; };
 		0498AEC41F5A467D0068F82F /* IndicatorPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorPagerViewController.swift; sourceTree = "<group>"; };
 		0498AEC61F5A54A60068F82F /* CustomIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
@@ -1552,6 +1554,7 @@
 		04D3AB7B1F46884D00C09DAA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				047C43602023F3FF008F2114 /* UIDevice+Extension.swift */,
 				040376581F5F765700582BD3 /* NetworkTools.swift */,
 				040376591F5F765700582BD3 /* UserDefault+Extension.swift */,
 				0403765A1F5F765700582BD3 /* UIView+Frame.swift */,
@@ -2071,6 +2074,7 @@
 				04D3AB881F4688FC00C09DAA /* UIFont.swift in Sources */,
 				04E0183B1F4FC4E30027E662 /* SightDetailViewController.swift in Sources */,
 				0403765E1F5F765700582BD3 /* UserDefault+Extension.swift in Sources */,
+				047C43612023F3FF008F2114 /* UIDevice+Extension.swift in Sources */,
 				04309BF81F4D739A00A54BBB /* DailyUI.swift in Sources */,
 				04F620921F4EC7E6003E08FA /* DailyDetailPresenter.swift in Sources */,
 				04C1811D1F4C41CA00EC6066 /* WritingDetailUI.swift in Sources */,
