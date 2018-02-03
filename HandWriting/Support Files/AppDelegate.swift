@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             installRootViewControllerIntoWindow(window!)
         }else{//2.如果不存在，登陆
             let loginVC = LoginViewController()
-            self.window?.rootViewController = loginVC
+            let nav = UINavigationController(rootViewController: loginVC)
+            loginVC.title = "用户登录"
+            self.window?.rootViewController = nav
         }
         
 //        installRootViewControllerIntoWindow(window!)
@@ -49,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Bugly.start(withAppId: AppID)
     }
     
+    //不私有化 供登录界面跳转调用
     func installRootViewControllerIntoWindow(_ window: UIWindow) {
         RootWireframe().presentInitialViewController(inWindow: window)
     }

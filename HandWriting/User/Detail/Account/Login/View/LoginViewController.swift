@@ -40,6 +40,9 @@ class LoginViewController: UIViewController {
         if (navigationController != nil) {
             self.navigationController?.navigationBar.tintColor = UIColor.white
             navigationBarHeight = (self.navigationController?.navigationBar.height)!
+        }
+        
+        if tabBarController != nil {
             tabbarHeight = (self.tabBarController?.tabBar.height)!
         }
     

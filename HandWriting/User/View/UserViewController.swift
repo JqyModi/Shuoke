@@ -18,10 +18,6 @@ protocol UserViewControllerDelegate {
 
 class UserViewController: HandWritingViewController, BothamTableViewController, UserUI {
     
-    override func viewWillLayoutSubviews() {
-        debugPrint("UserViewController >>> \(#function)")
-    }
-    
     @IBOutlet weak var tableView: UITableView!
     var dataSource: BothamTableViewDataSource<User, UserTableViewCell>!
     var delegate: UITableViewDelegate!
