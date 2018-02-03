@@ -75,6 +75,8 @@ extension RegisterViewController: RegisterViewWithMobDelegate{
                 
                 self.modalTransitionStyle = .crossDissolve
                 settingPwdVc.title = "设置密码"
+                
+                settingPwdVc.forgetOrRegister = "reg"
                 self.navigationController?.push(viewController: settingPwdVc, animated: true)
                 
             }else{

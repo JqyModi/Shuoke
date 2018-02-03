@@ -92,6 +92,8 @@ extension ForgetViewController: ForgetViewDelegate{
         
         self.modalTransitionStyle = .crossDissolve
         settingPwdVc.title = "设置密码"
+        
+        settingPwdVc.forgetOrRegister = "forget"
         self.navigationController?.push(viewController: settingPwdVc, animated: true)
     }
     

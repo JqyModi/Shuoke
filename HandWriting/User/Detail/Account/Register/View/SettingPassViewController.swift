@@ -14,6 +14,8 @@ class SettingPassViewController: UIViewController {
     var settingPassView: SettingPassView?
     var mob: String = ""
     
+    var forgetOrRegister: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.loginViewBGColor
@@ -43,21 +45,36 @@ class SettingPassViewController: UIViewController {
 }
 extension SettingPassViewController: SettingPassViewDelegate{
     //确认注册
-    func nextAction(pwd: String, confirmpwd: String) {
+    func nextAction(pwd: String, confirmpwd: String, forgetOrRegister: String) {
         debugPrint("确认注册")
         //判断两次输入密码是否一致
         if pwd == confirmpwd {
             let mob = self.mob
-            //提交信息到服务端: mob/pwd
-            submitRegitser(mob: mob, pwd: pwd, finished: { (isSuccess) in
-                if isSuccess {
-                    //跳转到登录页
-                    self.modalTransitionStyle = .crossDissolve
-                    //连续返回两级
-                    let index = self.navigationController?.viewControllers.index(of: self)
+            
+            if forgetOrRegister == "reg" {
+                //提交信息到服务端: mob/pwd
+                submitRegitser(mob: mob, pwd: pwd, finished: { (isSuccess) in
+                    if isSuccess {
+                        //跳转到登录页
+                        self.modalTransitionStyle = .crossDissolve
+                        //连续返回两级
+                        let index = self.navigationController?.viewControllers.index(of: self)
                     self.navigationController?.popToViewController((self.navigationController?.viewControllers[index!-2])!, animated: true)
-                }
-            })
+                    }
+                })
+            }else {
+                //提交信息到服务端: mob/pwd
+                forgotPassword(mob: mob, pwd: pwd, finished: { (isSuccess) in
+                    if isSuccess {
+                        //跳转到登录页
+                        self.modalTransitionStyle = .crossDissolve
+                        //连续返回两级
+                        let index = self.navigationController?.viewControllers.index(of: self)
+                    self.navigationController?.popToViewController((self.navigationController?.viewControllers[index!-2])!, animated: true)
+                    }
+                })
+            }
+            
         }else{
             SVProgressHUD.showError(withStatus: "两次输入密码不一致,请重新输入")
         }

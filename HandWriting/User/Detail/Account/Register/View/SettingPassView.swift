@@ -10,7 +10,7 @@ import UIKit
 
 protocol SettingPassViewDelegate {
     
-    func nextAction(pwd: String, confirmpwd: String)
+    func nextAction(pwd: String, confirmpwd: String, forgetOrRegister: String)
     
     //    func closeAction()
 }
@@ -28,6 +28,8 @@ class SettingPassView: UIView {
     var close: UIButton?
     
     var titleLabel: UILabel?
+    
+    var forgetOrRegister: String = "reg"
     
     //导入一个第三方库来实现安卓中的点击输入框提示文字上浮效果
     var userName: JVFloatLabeledTextField?
@@ -145,7 +147,7 @@ class SettingPassView: UIView {
     }
     
     func nextAction(){
-        settingPassViewDelegate?.nextAction(pwd: (userName?.text)!, confirmpwd: (password?.text)!)
+        settingPassViewDelegate?.nextAction(pwd: (userName?.text)!, confirmpwd: (password?.text)!, forgetOrRegister: self.forgetOrRegister)
     }
     
     func closeAction(){
