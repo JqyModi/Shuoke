@@ -104,9 +104,39 @@ class HomeViewPagerController: HandWritingViewController {
     
     var viewPager:ViewPagerController!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //登录才显示
+        if UserServece.checkLogin() {
+            debugPrint("HomeViewPagerController >>> \(#function)")
+            removeAllView()
+            setupUI()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //登录才显示
+        if UserServece.checkLogin() {
+            removeAllView()
+            setupUI()
+        }
+        
+        //测试看下一次进入时是否记录token
+//        debugPrint("token = \(UserDefaults.standard.object(forKey: "access_token"))")
+//        SVProgressHUD.show(withStatus: UserDefaults.standard.object(forKey: "access_token") as! String!)
+        
+        appDelegate.allowRotation = 1
+    }
+    
+    private func removeAllView() {
+        for view in self.view.subviews {
+            view.removeFromSuperview()
+        }
+    }
+    
+    private func setupUI() {
         //将item加入到数组中
         itemControllers.add(dailyViewController)
         itemControllers.add(copyBookViewController)
@@ -121,8 +151,8 @@ class HomeViewPagerController: HandWritingViewController {
         
         let options = ViewPagerOptions(viewPagerWithFrame: self.view.bounds)
         //带图标
-//        options.tabType = ViewPagerTabType.imageWithText
-//        options.tabViewImageSize = CGSize(width: 20, height: 20)
+        //        options.tabType = ViewPagerTabType.imageWithText
+        //        options.tabViewImageSize = CGSize(width: 20, height: 20)
         options.tabType = ViewPagerTabType.basic
         options.tabViewTextFont = UIFont.systemFont(ofSize: 14)
         //太小会导致整个Item布局被缩短:默认50
@@ -132,7 +162,7 @@ class HomeViewPagerController: HandWritingViewController {
         options.isTabHighlightAvailable = true
         options.tabViewTextDefaultColor = UIColor.cellTextColorDarkGray
         //设置指示器颜色
-//        options.tabViewBackgroundDefaultColor
+        //        options.tabViewBackgroundDefaultColor
         options.tabViewBackgroundHighlightColor = UIColor.tabIndicatorViewBackgroundColor1
         options.tabIndicatorViewBackgroundColor = UIColor.white
         
@@ -144,23 +174,18 @@ class HomeViewPagerController: HandWritingViewController {
         //设置全局背景色
         viewPager.view.backgroundColor = UIColor.pageBackgroundColorGray
         //设置导航栏背景色
-//        configureNavigationBar()
+        //        configureNavigationBar()
         //
         configTabbarStyle()
         //解决状态栏遮挡
-//        viewPager.view.top = 21
+        //        viewPager.view.top = 21
         self.addChildViewController(viewPager)
-        //登录才显示
-        if userLogin {
-            self.view.addSubview(viewPager.view)
-        }
+        self.view.addSubview(viewPager.view)
+        
         viewPager.didMove(toParentViewController: self)
         
-        //测试看下一次进入时是否记录token
-//        debugPrint("token = \(UserDefaults.standard.object(forKey: "access_token"))")
-//        SVProgressHUD.show(withStatus: UserDefaults.standard.object(forKey: "access_token") as! String!)
-        
-        appDelegate.allowRotation = 1
+        //
+        self.view.layoutIfNeeded()
     }
     
 //    override var shouldAutorotate: Bool {

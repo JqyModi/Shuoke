@@ -72,8 +72,10 @@ extension LoginViewController: LoginViewDelegate{
                     UserServece.saveWithNSKeyedArchiver(obj1: loginUser)
                     self.firstLogin = false
                     //跳转到用户信息界面
-                    self.navigationController?.popToRootViewController(animated: true)
-                    
+//                    self.navigationController?.popToRootViewController(animated: true)
+                    //跳转到主页 ：这句不一定对，大意是这个：
+                    let delegate = UIApplication.shared.delegate as? AppDelegate
+                    delegate?.installRootViewControllerIntoWindow((delegate?.window)!)
                 }
             })
             

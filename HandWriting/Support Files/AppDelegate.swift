@@ -17,7 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        installRootViewControllerIntoWindow(window!)
+        
+        //1.取出已存的账号,判断是否过期，是否仍然正确之类
+       let account = UserServece.checkLogin()
+        if (account) {
+            installRootViewControllerIntoWindow(window!)
+        }else{//2.如果不存在，登陆
+            let loginVC = LoginViewController()
+            self.window?.rootViewController = loginVC
+        }
+        
+//        installRootViewControllerIntoWindow(window!)
         configureWindow()
         configureNavigationBarStyle()
         
@@ -39,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Bugly.start(withAppId: AppID)
     }
     
-    private func installRootViewControllerIntoWindow(_ window: UIWindow) {
+    func installRootViewControllerIntoWindow(_ window: UIWindow) {
         RootWireframe().presentInitialViewController(inWindow: window)
     }
     
