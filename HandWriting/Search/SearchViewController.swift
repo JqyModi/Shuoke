@@ -166,7 +166,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
                 debugPrint("*****")
                 break;
             }
-            self.navigationController?.push(viewController: vc!, animated: true)
+            
+            if model != "video_play" {
+                self.navigationController?.push(viewController: vc!, animated: true)
+            }else {
+                self.navigationController?.viewControllers[0].present(vc!, animated: true, completion: nil)
+            }
+            
         }
     }
     

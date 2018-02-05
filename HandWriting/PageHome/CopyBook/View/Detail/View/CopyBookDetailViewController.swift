@@ -62,6 +62,8 @@ class CopyBookDetailViewController: HandWritingViewController, BothamCollectionV
         navigationController?.navigationBar.shadowImage = nil
         navigationController?.navigationBar.isTranslucent = false
         super.viewWillDisappear(animated)
+        
+        //显示导航栏
     }
     
     override func viewWillAppear(_ animated: Bool) {

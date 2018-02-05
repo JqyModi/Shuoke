@@ -42,6 +42,9 @@ class VideoDetailViewController: HandWritingViewController, VideoDetailUI ,ZFPla
         self.zfPlayerView?.pause()
         self.zfPlayerView?.resetPlayer()
         self.delegate?.playerBack(viewController: self.videoDetailViewController!)
+        
+        //返回
+        self.dismiss(animated: true, completion: nil)
     }
     
     func autoPlay(){
