@@ -45,6 +45,9 @@ class DailyPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
             self?.data = items
             self?.load(items: (self?.data)!)
         }
+        
+        //接收加载数据通知
+        NotificationCenter.default.addObserver(self, selector: #selector(loadMoreData(notify:)), name: NSNotification.Name(rawValue: "NotifyLoadMore"), object: nil)
     }
     
     @objc func loadMoreData(notify: Notification){
@@ -80,6 +83,7 @@ class DailyPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
         CacheCommonService.selectCommonsByType(type: 1, page: 1) { [weak self] (commons) in
             self?.load(items: commons)
             debugPrint("**********cachecount = \(commons.count)")
+            CacheCommonService.insertCommonWithArray(arr: commons, type: 1)
         }
         
         self.ui?.stopRefreshing()

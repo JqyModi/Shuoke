@@ -80,6 +80,7 @@ class StudyPresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNavig
         CacheCommonService.selectCommonsByType(type: 6, page: 1) { [weak self] (commons) in
             self?.load(items: commons)
             debugPrint("**********cachecount = \(commons.count)")
+            CacheCommonService.insertCommonWithArray(arr: commons, type: 6)
         }
         
         self.ui?.stopRefreshing()

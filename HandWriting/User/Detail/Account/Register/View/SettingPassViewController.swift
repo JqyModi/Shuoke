@@ -35,6 +35,8 @@ class SettingPassViewController: UIViewController {
     func initView(){
         
         settingPassView = SettingPassView(frame: CGRect(x: (SCREEN_WIDTH-300)/2, y: (SCREEN_HEIGHT-300-NavigationBarHeight-TabbarHeight)/2, width: 300, height: 300))
+        settingPassView?.forgetOrRegister = self.forgetOrRegister
+        debugPrint("settingPassView?.forgetOrRegister = \(settingPassView?.forgetOrRegister)")
         self.view.addSubview(settingPassView!)
     }
     
@@ -55,6 +57,7 @@ extension SettingPassViewController: SettingPassViewDelegate{
                 //提交信息到服务端: mob/pwd
                 submitRegitser(mob: mob, pwd: pwd, finished: { (isSuccess) in
                     if isSuccess {
+                        debugPrint("注册提交")
                         //跳转到登录页
                         self.modalTransitionStyle = .crossDissolve
                         //连续返回两级
@@ -66,6 +69,7 @@ extension SettingPassViewController: SettingPassViewDelegate{
                 //提交信息到服务端: mob/pwd
                 forgotPassword(mob: mob, pwd: pwd, finished: { (isSuccess) in
                     if isSuccess {
+                        debugPrint("找回密码提交")
                         //跳转到登录页
                         self.modalTransitionStyle = .crossDissolve
                         //连续返回两级

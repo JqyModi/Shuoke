@@ -81,6 +81,7 @@ class LoginView: UIView {
         userName?.placeholder = "用户名"
         userName?.font = UIFont.boldSystemFont(ofSize: 14)
         userName?.textColor = UIColor.cellTextColorDarkGray
+        userName?.delegate = self
         
         password = JVFloatLabeledTextField()
         password?.width = 200
@@ -91,6 +92,8 @@ class LoginView: UIView {
         password?.font = UIFont.boldSystemFont(ofSize: 14)
         userName?.textColor = UIColor.cellTextColorDarkGray
         password?.isSecureTextEntry = true
+        //处理键盘弹出事件
+        password?.delegate = self
         
         login = UIButton()
         login?.width = 150
@@ -156,5 +159,13 @@ class LoginView: UIView {
     
     func registerAction(){
         loginDelegate?.registerAction()
+    }
+}
+extension LoginView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

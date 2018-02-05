@@ -81,6 +81,7 @@ class RegisterView: UIView {
         userName?.placeholder = "手机号码"
         userName?.font = UIFont.boldSystemFont(ofSize: 14)
         userName?.textColor = UIColor.cellTextColorDarkGray
+        userName?.delegate = self
         
 //        email = JVFloatLabeledTextField()
 //        email?.width = 200
@@ -100,6 +101,7 @@ class RegisterView: UIView {
         password?.font = UIFont.boldSystemFont(ofSize: 14)
         password?.textColor = UIColor.cellTextColorDarkGray
         password?.isSecureTextEntry = true
+        password?.delegate = self
         
         confirmPassword = JVFloatLabeledTextField()
         confirmPassword?.width = 200
@@ -110,6 +112,7 @@ class RegisterView: UIView {
         confirmPassword?.font = UIFont.boldSystemFont(ofSize: 14)
         confirmPassword?.textColor = UIColor.cellTextColorDarkGray
         confirmPassword?.isSecureTextEntry = true
+        confirmPassword?.delegate = self
         
         nextBtn = UIButton()
         nextBtn?.width = 150
@@ -244,7 +247,14 @@ class RegisterView: UIView {
         close?.layer.add(theAnimation!, forKey: nil)
     }
 }
-
+extension RegisterView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
 
 
 

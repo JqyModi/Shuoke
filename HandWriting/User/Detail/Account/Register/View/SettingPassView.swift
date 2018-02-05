@@ -29,7 +29,7 @@ class SettingPassView: UIView {
     
     var titleLabel: UILabel?
     
-    var forgetOrRegister: String = "reg"
+    var forgetOrRegister: String?
     
     //导入一个第三方库来实现安卓中的点击输入框提示文字上浮效果
     var userName: JVFloatLabeledTextField?
@@ -83,6 +83,7 @@ class SettingPassView: UIView {
         userName?.font = UIFont.boldSystemFont(ofSize: 14)
         userName?.textColor = UIColor.cellTextColorDarkGray
         userName?.isSecureTextEntry = true
+        userName?.delegate = self
         
         password = JVFloatLabeledTextField()
         password?.width = 200
@@ -93,6 +94,7 @@ class SettingPassView: UIView {
         password?.font = UIFont.boldSystemFont(ofSize: 14)
         password?.textColor = UIColor.cellTextColorDarkGray
         password?.isSecureTextEntry = true
+        password?.delegate = self
         
 //        confirmPassword = JVFloatLabeledTextField()
 //        confirmPassword?.width = 200
@@ -147,10 +149,18 @@ class SettingPassView: UIView {
     }
     
     func nextAction(){
-        settingPassViewDelegate?.nextAction(pwd: (userName?.text)!, confirmpwd: (password?.text)!, forgetOrRegister: self.forgetOrRegister)
+        settingPassViewDelegate?.nextAction(pwd: (userName?.text)!, confirmpwd: (password?.text)!, forgetOrRegister: self.forgetOrRegister!)
     }
     
     func closeAction(){
         //        updatePassDelegate?.closeAction()
+    }
+}
+extension SettingPassView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

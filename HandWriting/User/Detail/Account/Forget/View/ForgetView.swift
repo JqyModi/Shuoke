@@ -85,6 +85,7 @@ class ForgetView: UIView {
         userName?.placeholder = "手机号码"
         userName?.font = UIFont.boldSystemFont(ofSize: 14)
         userName?.textColor = UIColor.cellTextColorDarkGray
+        userName?.delegate = self
         
         password = JVFloatLabeledTextField()
         password?.width = (userName?.width)!/2
@@ -95,6 +96,7 @@ class ForgetView: UIView {
         password?.font = UIFont.boldSystemFont(ofSize: 14)
         password?.textColor = UIColor.cellTextColorDarkGray
         //        password?.isSecureTextEntry = true
+        password?.delegate = self
         
         code = UIButton()
         code?.width = (userName?.width)!/2
@@ -160,5 +162,13 @@ class ForgetView: UIView {
     
     func closeAction(){
         loginDelegate?.closeAction()
+    }
+}
+extension ForgetView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

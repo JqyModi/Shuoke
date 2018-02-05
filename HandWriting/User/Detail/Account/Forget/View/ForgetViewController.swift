@@ -66,35 +66,27 @@ extension ForgetViewController: ForgetViewDelegate{
     }
     func loginAction(name: String, code: String) {
         //提交短信验证码
-        //        SMSSDK.commitVerificationCode(code, phoneNumber: name, zone: zoneStr, result: {(error) in
-        //            if (!(error != nil)){
-        //                // 验证成功
-        //                SVProgressHUD.showSuccess(withStatus: "验证成功,下一步设置密码")
-        //                //验证成功跳转到设置密码界面
-        //                let settingPwdVc = SettingPassViewController()
-        //                settingPwdVc.mob = name
-        ////                self.navigationController?.push(viewController: settingPwdVc)
-        ////                self.show(settingPwdVc, sender: nil)
-        //
-        //                self.modalTransitionStyle = .crossDissolve
-        //                self.navigationController?.push(viewController: settingPwdVc, animated: true)
-        //
-        //            }else{
-        //                // error
-        //                SVProgressHUD.showSuccess(withStatus: "验证失败")
-        //            }
-        //        })
-        
-        let settingPwdVc = SettingPassViewController()
-        settingPwdVc.mob = name
-        //                self.navigationController?.push(viewController: settingPwdVc)
-        //                self.show(settingPwdVc, sender: nil)
-        
-        self.modalTransitionStyle = .crossDissolve
-        settingPwdVc.title = "设置密码"
-        
-        settingPwdVc.forgetOrRegister = "forget"
-        self.navigationController?.push(viewController: settingPwdVc, animated: true)
+        SMSSDK.commitVerificationCode(code, phoneNumber: name, zone: zoneStr, result: {(error) in
+            if (!(error != nil)){
+                // 验证成功
+                SVProgressHUD.showSuccess(withStatus: "验证成功,下一步设置密码")
+                //验证成功跳转到设置密码界面
+                let settingPwdVc = SettingPassViewController()
+                settingPwdVc.mob = name
+                //                self.navigationController?.push(viewController: settingPwdVc)
+                //                self.show(settingPwdVc, sender: nil)
+                
+                self.modalTransitionStyle = .crossDissolve
+                settingPwdVc.title = "设置密码"
+                
+                settingPwdVc.forgetOrRegister = "forget"
+                self.navigationController?.push(viewController: settingPwdVc, animated: true)
+
+            }else{
+                // error
+                SVProgressHUD.showSuccess(withStatus: "验证失败")
+            }
+        })
     }
     
     func closeAction(){
