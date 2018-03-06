@@ -45,7 +45,8 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
 //        tableView.bottom = SCREEN_HEIGHT - CGFloat(TabbarHeight)
         super.viewDidLoad()
         configTabbarStyle()
-        
+        //配置contentoffset解决TabBar遮挡Cell问题
+        configTableViewContentOffset()
         NotificationCenter.default.addObserver(self, selector: #selector(loadCacheSize(_:)), name: NSNotification.Name(rawValue: "cacheSizeM"), object: nil)
     }
     
@@ -192,6 +193,15 @@ class UserViewController: HandWritingViewController, BothamTableViewController, 
         let tabbarItem1 = tabBarItem as! CBMaterialTabbarItem
         tabbarItem1.rippleLayerColor = UIColor.Tabbar4Color
     }
+    
+    private func configTableViewContentOffset() {
+        //获取当前TabBar高度
+        let tabbarHeight = TabbarHeight + 10
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabbarHeight, right: 0)
+        //
+        debugPrint("修改contentInset测试")
+    }
+    
 }
 
 extension UserViewController: UserWireframeDelegate, UserHeaderViewDelegate {

@@ -31,8 +31,9 @@ class LectureDetailViewController: HandWritingViewController, LectureDetailUI {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+//        SVProgressHUD.show(withStatus: Loading)
+        debugPrint("开始显示提示内容")
         SVProgressHUD.show(withStatus: Loading)
-        
     }
     
     func show(item: URL) {
@@ -58,8 +59,9 @@ class LectureDetailViewController: HandWritingViewController, LectureDetailUI {
                     let size = (data.length) / (1024*1024) + 1
                     if size > 10 {
                         //显示下载布局
-                        self.showDownloadButton()
                         DispatchQueue.main.async(execute: {
+                            //主线程操作UI
+                            self.showDownloadButton()
                             SVProgressHUD.showError(withStatus: "文件过大,预览失败,请下载查看~")
                         })
                     }else{

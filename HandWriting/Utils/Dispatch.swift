@@ -282,7 +282,7 @@ func autoLogin(token: String, finished:@escaping (_ item: LoginUser) -> ()){
             let code = dict["error_code"].intValue
             let message = dict["message"].stringValue
             guard code == RETURN_OK else {
-                SVProgressHUD.showInfo(withStatus: message)
+                SVProgressHUD.showInfo(withStatus: "自动登录失败请重新登录 ~")
                 return
             }
             SVProgressHUD.dismiss()

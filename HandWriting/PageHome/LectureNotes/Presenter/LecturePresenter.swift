@@ -26,7 +26,7 @@ class LecturePresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNav
     
     func viewDidLoad() {
         debugPrint("加载布局完成")
-        
+        SVProgressHUD.show(withStatus: Loading)
         /*
          填充数据
          {
@@ -90,6 +90,10 @@ class LecturePresenter: BothamPresenter, BothamPullToRefreshPresenter, BothamNav
     }
     private func load(items: [Common]) {
         self.ui?.show(items: items)
+        
+        //数据加载完成关闭提示View
+        SVProgressHUD.dismiss()
+        
     }
     
     func itemWasTapped(_ item: Common) {

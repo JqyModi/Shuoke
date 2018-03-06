@@ -85,6 +85,16 @@ class HomeViewPagerController: HandWritingViewController {
         }
     }
     
+    private func configTableViewContentOffset(viewController: UIViewController) {
+        if let tableView = viewController.view.subviews[0] as? UITableView {
+            //获取当前TabBar高度
+            let tabbarHeight = TabbarHeight
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabbarHeight, right: 0)
+            //
+            debugPrint("修改contentInset测试")
+        }
+    }
+    
     private func setupUI() {
         //将item加入到数组中
         itemControllers.add(dailyViewController)
@@ -93,6 +103,13 @@ class HomeViewPagerController: HandWritingViewController {
         itemControllers.add(sightViewController)
         itemControllers.add(famousViewController)
         itemControllers.add(studyViewController)
+        
+        for item in itemControllers {
+            //设置TableView的ScrollView的contentoffset来解决遮挡问题
+            if let viewController = item as? UIViewController {
+                configTableViewContentOffset(viewController: viewController)
+            }
+        }
         
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         //设置导航栏文字

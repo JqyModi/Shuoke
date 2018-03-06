@@ -39,6 +39,9 @@ class LoginView: UIView {
         super.init(frame: frame)
         //
         self.intiView()
+        
+        //处理键盘弹出事件
+//        handleEvent()
     }
     
     required init?(coder aDecoder: NSCoder) {

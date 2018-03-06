@@ -23,6 +23,9 @@ class SettingPassViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         initEvent()
+        
+        handleEvent()
+        
         //改变导航按钮着色
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
@@ -42,6 +45,46 @@ class SettingPassViewController: UIViewController {
     
     func initEvent(){
         settingPassView?.settingPassViewDelegate = self
+    }
+    
+    @objc private func keyBoardDidChangeFrame(notification: Notification) {
+        
+        //        "[AnyHashable(\"UIKeyboardCenterBeginUserInfoKey\"): NSPoint: {187.5, 796}, AnyHashable(\"UIKeyboardIsLocalUserInfoKey\"): 1, AnyHashable(\"UIKeyboardCenterEndUserInfoKey\"): NSPoint: {187.5, 538}, AnyHashable(\"UIKeyboardBoundsUserInfoKey\"): NSRect: {{0, 0}, {375, 258}}, AnyHashable(\"UIKeyboardFrameEndUserInfoKey\"): NSRect: {{0, 409}, {375, 258}}, AnyHashable(\"UIKeyboardAnimationCurveUserInfoKey\"): 7, AnyHashable(\"UIKeyboardFrameBeginUserInfoKey\"): NSRect: {{0, 667}, {375, 258}}, AnyHashable(\"UIKeyboardAnimationDurationUserInfoKey\"): 0.25]"
+        
+        debugPrint("func --> \(#function) : line --> \(#line)")
+        
+        //以键值方式获取通知中键盘信息
+        let keyBoardFrame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! CGRect
+        //计算键盘弹出后View的Y值
+        let keyBY = keyBoardFrame.minY
+        let loginY = settingPassView?.frame.maxY
+        //判断键盘是否覆盖
+        var y: CGFloat = 0
+        if loginY! > keyBY {
+            debugPrint("遮挡状态")
+            y = (settingPassView?.frame.maxY)! - keyBoardFrame.minY
+            //通过动画方式改变改变loginView的Y值
+            UIView.animate(withDuration: 0.6) {
+                //            self.loginView?.transform = CGAffineTransform(translationX: 0, y: -y1)
+                self.settingPassView?.frame = CGRect(x: (SCREEN_WIDTH-300)/2, y: y, width: 300, height: 300)
+            }
+        }else {
+            debugPrint("不遮挡状态")
+            y = (SCREEN_HEIGHT-300-NavigationBarHeight-TabbarHeight)/2
+            UIView.animate(withDuration: 0.6) {
+                //            self.loginView?.transform = CGAffineTransform(translationX: 0, y: -y1)
+                self.settingPassView?.frame = CGRect(x: (SCREEN_WIDTH-300)/2, y: y, width: 300, height: 300)
+            }
+        }
+        debugPrint("y = \(y)")
+    }
+    
+    private func handleEvent() {
+        //注册一个键盘改变通知
+        let center = NotificationCenter.default
+        //监听所有键盘改变事件：object: nil
+        center.addObserver(self, selector: #selector(SettingPassViewController.keyBoardDidChangeFrame(notification:)), name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        
     }
     
 }

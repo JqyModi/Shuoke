@@ -9,6 +9,7 @@
 import Foundation
 import BothamUI
 import UIKit
+import SVProgressHUD
 
 class RootWireframe: HandWritingWireframe {
     var tabs: [UIViewController] = []
@@ -19,6 +20,12 @@ class RootWireframe: HandWritingWireframe {
         viewController.viewControllers = tabs
         let tabBar = viewController.tabBar
         configureTabBarItems(tabBar)
+        
+        //设置提示布局的样式
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.dark)
+        //设置提示内容背景遮罩防止用户误操作
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+        
         window.rootViewController = viewController
     }
     

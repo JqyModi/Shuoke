@@ -33,6 +33,10 @@ class SearchViewController: UIViewController {
             searchController?.searchBar.searchBarStyle = .minimal
             searchController?.searchBar.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 40)
             searchController?.searchBar.delegate = self
+            
+            //
+            searchController?.dimsBackgroundDuringPresentation = false
+            
         }
     }
     
@@ -67,6 +71,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         var resultTableViewController = SearchResultTableViewController()
         //处理搜索结果
+        resultTableViewController.view.backgroundColor = UIColor.randomColor()
+        
         searchController = UISearchController.init(searchResultsController: resultTableViewController)
         //改变导航栏颜色
         naviStyle(viewController: self.navigationController!, color: UIColor.Tabbar1Color)
