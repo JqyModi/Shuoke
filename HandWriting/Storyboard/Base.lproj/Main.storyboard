@@ -389,6 +389,41 @@
             </objects>
             <point key="canvasLocation" x="1444" y="-176"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="AQU-jk-O7g">
+            <objects>
+                <viewController id="zad-9C-dkP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wxj-8m-Pb5"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Vz-vK-a0u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQ9-0w-XBa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" showsSearchResultsButton="YES" showsCancelButton="YES" translucent="NO" scopeBarBackgroundImage="bg_green" translatesAutoresizingMaskIntoConstraints="NO" id="ijW-4f-Djg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.36908637152777779" green="0.6660319070416667" blue="0.58655057023611112" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTt-Nt-jSk">
+                                <rect key="frame" x="0.0" y="93" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36908637150000001" green="0.66603190700000003" blue="0.58655057020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKy-S2-7O9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3156" y="-188.45577211394306"/>
+        </scene>
         <!--主页-->
         <scene sceneID="x2S-wU-Sm9">
             <objects>
@@ -466,6 +501,7 @@
     </scenes>
     <resources>
         <image name="back" width="24" height="24"/>
+        <image name="bg_green" width="463" height="160"/>
         <image name="heart" width="23" height="23"/>
         <image name="home_home" width="16" height="16"/>
         <image name="home_user" width="16" height="16"/>

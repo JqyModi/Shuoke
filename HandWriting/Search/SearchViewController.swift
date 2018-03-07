@@ -19,6 +19,8 @@ class SearchViewController: UIViewController {
             //设置表格自动行高
             tableView.estimatedRowHeight = tableView.rowHeight //storyboard中的高度：估计值
             tableView.rowHeight = UITableViewAutomaticDimension //将高度估计值换为计算后的真实值
+            
+//            tableView.backgroundColor = UIColor.randomColor()
         }
     }
     
@@ -28,13 +30,13 @@ class SearchViewController: UIViewController {
             //设置搜索结果显示
             searchController?.searchResultsUpdater = self
             tableView.tableHeaderView = searchController?.searchBar
-            self.definesPresentationContext = true
             searchController?.searchBar.placeholder = "请输入视频、讲义、碑帖名称"
-            searchController?.searchBar.searchBarStyle = .minimal
-            searchController?.searchBar.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 40)
+            searchController?.searchBar.searchBarStyle = .prominent
+            searchController?.searchBar.backgroundColor = UIColor.init(white: 1, alpha: 0.93)
+            //觉得searchBar是否可以跟随父控制器滚动显示
+            self.definesPresentationContext = true
+            searchController?.searchBar.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 64)
             searchController?.searchBar.delegate = self
-            
-            //
             searchController?.dimsBackgroundDuringPresentation = false
             
         }
@@ -52,6 +54,7 @@ class SearchViewController: UIViewController {
     }
     
     func updateUI() {
+
         self.tableView.reloadData()
     }
     
@@ -69,16 +72,17 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var resultTableViewController = SearchResultTableViewController()
-        //处理搜索结果
-        resultTableViewController.view.backgroundColor = UIColor.randomColor()
-        
-        searchController = UISearchController.init(searchResultsController: resultTableViewController)
+        //searchResultsController：nil表示当前显示搜索结果的控制器就是当前控制器
+        searchController = UISearchController.init(searchResultsController: nil)
         //改变导航栏颜色
         naviStyle(viewController: self.navigationController!, color: UIColor.Tabbar1Color)
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 }
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating, UIScrollViewDelegate {
     //MARK:- UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults?.count ?? 0
@@ -139,13 +143,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
             debugPrint("*****")
             break;
         }
-        //发送跳转广播
-//        let center = NotificationCenter.default
-//        center.post(name: NSNotification.Name.init(NotifyTapToDetail), object: nil, userInfo: ["detailData" : detailData])
-//        //关闭当前搜索页面
-//        if detailData["model"] as? String != "video_play" {
-//            dismiss(animated: true, completion: nil)
-//        }
         
         //获取待跳转的VC
         //获取数据
@@ -205,4 +202,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         //关闭searchController防止遮罩挡住操作
         searchController?.dismiss(animated: true, completion: nil)
     }
+    
+    //MARK:- UIScrollViewDelegate
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        debugPrint("func --> \(#function) : line --> \(#line)")
+        //隐藏键盘
+        self.searchController?.searchBar.resignFirstResponder()
+        
+        //改变状态栏颜色
+        
+    }
+    
 }
