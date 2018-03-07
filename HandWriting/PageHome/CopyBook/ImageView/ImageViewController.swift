@@ -66,7 +66,7 @@ class ImageViewController: UIViewController {
             scrollView?.contentSize = imageView.frame.size
             //支持缩放
             scrollView?.delegate = self
-            scrollView?.minimumZoomScale = 0.1
+            scrollView?.minimumZoomScale = 0.5
             scrollView?.maximumZoomScale = 1.0
         }
     }
@@ -115,7 +115,26 @@ class ImageViewController: UIViewController {
             }
             gesture.scale = 1
         }
+        //缩放完成居中显示图片
+        showImageViewToCenter()
     }
+    
+    /**
+     *  Desc: 以动画方式将图片居中
+     *  Param:
+     */
+    func showImageViewToCenter() {
+        let x = (SCREEN_WIDTH-imageView.size.width)/2
+        let y = (SCREEN_HEIGHT-imageView.size.height)/2
+        let w = imageView.size.width
+        let h = imageView.size.height
+        
+        UIView.animate(withDuration: 0.6) {
+            self.imageView.frame = CGRect(x: x, y: y, width: w, height: h)
+        }
+        
+    }
+    
     func rotationImageView(gesture: UIRotationGestureRecognizer) {
         
     }
@@ -147,6 +166,15 @@ class ImageViewController: UIViewController {
 extension ImageViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
+    }
+    
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        debugPrint("func --> \(#function) : line --> \(#line)")
+        self.showImageViewToCenter()
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+//        debugPrint("func --> \(#function) : line --> \(#line)")
     }
 }
 
