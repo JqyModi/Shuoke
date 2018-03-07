@@ -244,10 +244,10 @@ func login(mob: String, password: String, finished:@escaping (_ item: LoginUser)
 //    }
     
     Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-//        guard response.result.isSuccess else {
-//            SVProgressHUD.showErrorWithStatus("加载失败...")
-//            return
-//        }
+        guard response.result.isSuccess else {
+            SVProgressHUD.showError(withStatus: "网络连接异常，登录失败...")
+            return
+        }
         if let value = response.result.value {
             let dict = JSON(value)
             let code = dict["error_code"].intValue
@@ -273,10 +273,10 @@ func autoLogin(token: String, finished:@escaping (_ item: LoginUser) -> ()){
     let params: [String: Any] = ["access_token": token]
 
     Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-        //        guard response.result.isSuccess else {
-        //            SVProgressHUD.showErrorWithStatus("加载失败...")
-        //            return
-        //        }
+        guard response.result.isSuccess else {
+            SVProgressHUD.showError(withStatus: "自动登录失败...")
+            return
+        }
         if let value = response.result.value {
             let dict = JSON(value)
             let code = dict["error_code"].intValue

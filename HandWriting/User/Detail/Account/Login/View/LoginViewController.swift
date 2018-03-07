@@ -122,6 +122,8 @@ extension LoginViewController: LoginViewDelegate{
                     //跳转到主页 ：这句不一定对，大意是这个：
                     let delegate = UIApplication.shared.delegate as? AppDelegate
                     delegate?.installRootViewControllerIntoWindow((delegate?.window)!)
+                }else {
+                    debugPrint("func --> \(#function) : line --> \(#line)")
                 }
             })
             
